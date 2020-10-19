@@ -1,0 +1,17 @@
+https://brand.uber.com/guide#logo-overview
+https://brand.linkedin.com/downloads
+
+https://github.com/tsayen/dom-to-image
+https://ourcodeworld.com/articles/read/38/how-to-capture-an-image-from-a-dom-element-with-javascript
+https://jsfiddle.net/ourcodeworld/85gtpcto/1/
+https://www.npmjs.com/package/html-to-image
+
+TODO:
+- State managment with Redux: 
+  - Logotype: text, fontFamily, fontWeight, fontStyle, color, isotype (icon name) 
+- Cambiar Icon por import icon into all project
+- Refactor navbar:
+  - Divider spacing css
+  - 
+- Setting Isotype component (list Material icons )
+- Setting global color
