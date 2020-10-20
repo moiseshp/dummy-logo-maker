@@ -1,5 +1,5 @@
 import React from 'react'
-import { Breadcrumbs, Link, Typography } from '@material-ui/core'
+import { Button, Link, Typography } from '@material-ui/core'
 
 const Navigation = () => {
   const [active, setActive] = React.useState<string>('Only Logo') 
@@ -13,20 +13,20 @@ const Navigation = () => {
     'Only Isotype'
   ]
   return (
-    <Breadcrumbs aria-label="breadcrumb" separator="|">
+    <React.Fragment>
       {items.map((item) => (
-        <Link 
+        <Button 
           key={item}
-          component="button"
           onClick={handleClick}
           color={item !== active ? 'inherit' : 'primary'}
-          style={{ fontWeight: item === active ? 'bold' : 'normal'}}
+          // style={{ fontWeight: item === active ? 'bold' : 'normal'}}
           disabled={item === active}
+          size="small"
         >
           {item}
-        </Link>
+        </Button>
       ))}
-    </Breadcrumbs>  
+    </React.Fragment>  
   )
 }
 

@@ -16,7 +16,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       backgroundColor: theme.palette.background.default,
       padding: theme.spacing(3),
-      position: 'relative'
-    },
+      position: 'relative',
+    }
   }),
 )

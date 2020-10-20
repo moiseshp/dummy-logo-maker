@@ -7,7 +7,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     card: ({ negative }: any) => ({
       textAlign: 'center',
-      padding: theme.spacing(12, 0)
+      padding: theme.spacing(16, 0)
     
       // display: 'flex',
       // justifyItems: 'center',

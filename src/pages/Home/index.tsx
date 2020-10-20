@@ -1,8 +1,9 @@
 import React from 'react'
+import { Box, Toolbar } from '@material-ui/core'
 import Navbar from '../../components/Navbar'
 import ColorSetting from '../../components/ColorSetting'
 import LogoSection from './LogoSection'
-import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
 import { useStyles } from './useStyles'
 
 const Home = () => {
@@ -12,18 +13,10 @@ const Home = () => {
     <div className={classes.root}>
       <Navbar />
       <main className={classes.content}>
-        <div className={classes.toolbar} />
+        <Toolbar />
         <LogoSection />
       </main>
-      <footer
-        style={{
-          position: 'absolute',
-          bottom: 30,
-          right: 530
-        }}
-      >
-        <Navigation />
-      </footer>
+      <Footer />
       <ColorSetting />
     </div>
   )

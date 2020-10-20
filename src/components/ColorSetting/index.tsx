@@ -16,7 +16,9 @@ const Sidebar = () => {
         }}
         anchor="right"
       >
-        <Toolbar />
+        <Toolbar >
+          Toolbar
+        </Toolbar>
         <Box className={classes.box} padding={3}>
           <Card className={classes.cardWrapper} variant="outlined" style={{ background: '#000'}}>
             {/* <Card className={classes.card} elevation={0}> */}

@@ -38,7 +38,7 @@ const Logotype:React.FC<Props> = ({
             </Icon>
           )}
           {text && (
-            <Typography variant="h2" component="span">
+            <Typography variant="h2" component="div">
               {text}
             </Typography>
           )}

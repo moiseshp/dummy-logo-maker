@@ -6,12 +6,13 @@ https://ourcodeworld.com/articles/read/38/how-to-capture-an-image-from-a-dom-ele
 https://jsfiddle.net/ourcodeworld/85gtpcto/1/
 https://www.npmjs.com/package/html-to-image
 
+All name material icons
+https://gist.github.com/olavoasantos/24c71cef717865fb8186a9d62f1fcba0
+
 TODO:
-- State managment with Redux: 
-  - Logotype: text, fontFamily, fontWeight, fontStyle, color, isotype (icon name) 
+- Navigation layout: h, v, only
 - Cambiar Icon por import icon into all project
-- Refactor navbar:
-  - Divider spacing css
-  - 
+- State managment with Redux: 
+  - Logotype: name, fontFamily, fontWeight, fontStyle, color, isotype (icon name), layout
 - Setting Isotype component (list Material icons )
 - Setting global color
