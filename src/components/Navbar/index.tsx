@@ -1,61 +1,42 @@
 import React from 'react'
 import { 
-  AppBar, 
-  Box, 
-  Button, 
+  AppBar,
   Divider, 
   Icon, 
   IconButton, 
-  InputBase, 
-  Toolbar, 
-  Typography
+  Toolbar
 } from '@material-ui/core'
+import Logotype from './Logotype'
+import LogotypeReset from './LogotypeReset'
+import LogotypeInput from './LogotypeInput'
+import LogotypeStyle from './LogotypeStyle'
+import LogotypeWeight from './LogotypeWeight'
 import { useStyles } from './useStyles'
 
 const Navbar = () => {
   const classes = useStyles()
+
   return (
     <AppBar position="fixed" color="inherit" elevation={0} className={classes.root}>
       <Toolbar>
-        <Box display="flex" mr={2}>
-          <Icon>fingerprint</Icon>
-        </Box>        
-        <Typography variant="h6" noWrap>
-          <strong>FINGERPRINT</strong>
-        </Typography>
+
+        <Logotype />
 
         <Divider orientation="vertical" flexItem className={classes.dividerLarge} />
 
         <div style={{ flexGrow: 1 }}>
-          <Button 
-            variant="text" 
-            size="small"
-            startIcon={<Icon>replay</Icon>}
-          >
-            Reset all change
-          </Button>
+          <LogotypeReset />
         </div>
 
         <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
 
-        <Typography variant="body1" className={classes.typography}>
-          Type here : 
-        </Typography> 
-        <Box ml={2}>
-          <InputBase
-            defaultValue="Logotype"
-            placeholder="e.g. Logotype"
-          />
-        </Box>
+        <LogotypeInput />
       
         <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
   
-        <IconButton>
-          <Icon>format_bold</Icon>
-        </IconButton>
-        <IconButton>
-          <Icon>format_italic</Icon>
-        </IconButton>
+        <LogotypeWeight />
+
+        <LogotypeStyle />
 
         <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
 

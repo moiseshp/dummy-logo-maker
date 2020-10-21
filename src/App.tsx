@@ -6,7 +6,6 @@ import Home from './pages/Home'
 import theme from './theme'
 
 const App = () => {
-  // const theme = React.useContext(ThemeContext)  
   return(
     <ThemeProvider theme={theme}>
       <CssBaseline />

@@ -1,32 +1,24 @@
 import React from 'react'
-import { Button, Box, Card, CardContent, CardActions, Grid, Typography, Divider } from '@material-ui/core'
+import { Box, Grid, Typography } from '@material-ui/core'
 import Heading from '../../components/Heading'
 import Logotype from '../../components/Logotype'
 
 const LogoSection = () => {
   return (
-    <Box pt={6}>
-      <Heading text="Dummy logo design" />
-      <Typography variant="body2">
-        Nihil aliquam rerum omnis sed impedit magni deleniti veritatis culpa id. Tenetur, dolore laboriosam!
-      </Typography>
-      <br />
-      <br />
+    <Box pt={5}>
+      <Heading text={process.env.REACT_APP_NAME} />
+      <Box mb={4}>
+        <Typography variant="body1">
+          Create your own logo or use the one that is ready!
+        </Typography>
+      </Box>
+
       <Grid container spacing={3}>
-        <Grid item sm={6}>
-          <Logotype
-            text="Logotype"
-            heading="Light version"
-            isotype="admin_panel_settings"
-          />
+        <Grid item sm={12} lg={6}>
+          <Logotype />
         </Grid>
-        <Grid item sm={6}>
-          <Logotype 
-            text="Logotype"
-            heading="Negative version"
-            isotype="admin_panel_settings"
-            negative
-          />
+        <Grid item sm={12} lg={6}>
+          <Logotype negative />
         </Grid>
       </Grid>
     </Box>

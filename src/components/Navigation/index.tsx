@@ -1,44 +1,47 @@
 import React from 'react'
-import { Button, Divider, Icon } from '@material-ui/core'
-import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    icon: {
-      marginRight: theme.spacing(2)
-    },
-    divider: {
-      margin: theme.spacing(3, 2)
-    }
-  })
-)
+import { Box, Button, Divider } from '@material-ui/core'
+import { LogotypeContext } from '../../store/contexts/logotype'
+import { LOGOTYPE_STORE } from '../../store/types/logotype'
+import { useStyles } from './useStyles'
 const items = [
-  'Only Logo',
-  'Logo + Isotype - H',
-  'Logo + Isotype - V',
-  'Only Isotype'
+  { id: 'LOG', text: 'Logo' },
+  { id: 'LIH', text: 'Logo + Isotype - H' },
+  { id: 'LIV', text: 'Logo + Isotype - V' },
+  { id: 'ISO', text: 'Isotype' }
 ]
+
 const Navigation = () => {
   const classes = useStyles()
-  const [active, setActive] = React.useState<string>('Only Logo') 
+  const { state: logotype, dispatch }: any = React.useContext(LogotypeContext)
+  const handleClick = (id: string) => {
+    dispatch({
+      type: LOGOTYPE_STORE,
+      payload: {
+        field: 'layout',
+        value: id
+      }
+    })
+  }
   return (
     <React.Fragment>
-      <Icon className={classes.icon}>videogame_asset</Icon>
+      <Box mr={2}>
+        Select to Layout : 
+      </Box>
       {items.map((item, key) => (
-        <React.Fragment>
+        <React.Fragment key={item.id}>
           <Button 
-            key={item}
-            onClick={() => console.info(item)}
-            disabled={item === active}
+            onClick={() => handleClick(item.id)}
+            disabled={item.id === logotype.layout}
+            className={item.id === logotype.layout ? classes.active : ''}
             size="small"
           >
-            {item}
+            {item.text}
           </Button>
-          {items.length !== key + 1 && (
+          {items.length !== (key + 1) && (
             <Divider 
-              key={item} 
               orientation="vertical" 
-              flexItem className={classes.divider}
+              flexItem 
+              className={classes.divider}
             />
           )}
         </React.Fragment>

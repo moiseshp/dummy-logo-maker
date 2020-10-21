@@ -3,7 +3,7 @@ import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     box: {
-      marginBottom: theme.spacing(6),
+      marginBottom: theme.spacing(4),
     },
     typography: {
       position: 'relative',
@@ -14,8 +14,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         backgroundColor: theme.palette.primary.main,
         bottom: -15,
         left: 0,
-        width: '40%',
-        height: 2,
+        width: '60%',
+        height: 1,
       }
     }
   })

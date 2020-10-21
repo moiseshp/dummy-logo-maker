@@ -9,14 +9,14 @@ const Footer = () => {
   return (
     <AppBar className={classes.root} color="transparent" elevation={0}>
       <Toolbar>
-        <Typography variant="body2" noWrap style={{ flexGrow: 1 }}>
+        <Typography variant="caption" noWrap style={{ flexGrow: 1 }}>
           &copy; {date.getFullYear()} {process.env.REACT_APP_NAME} is powered by 
           &nbsp;
           <Link
             href={process.env.REACT_APP_GITHUB}
             target="_blank"
           >
-            {process.env.REACT_APP_SIGNATURE} 
+            <strong>{process.env.REACT_APP_SIGNATURE}</strong> 
           </Link>
         </Typography>
         <Navigation />

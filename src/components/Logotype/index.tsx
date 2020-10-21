@@ -1,51 +1,51 @@
 import React from 'react'
 import { Button, Box, Icon, Card, Typography } from '@material-ui/core'
+import { LogotypeContext } from '../../store/contexts/logotype'
 import { useStyles } from './useStyles'
 
 type Props = {
-  text?: string
-  heading?: string
-  isotype?: string
   negative?: boolean
-  vertical?: boolean
 }
 
-const Logotype:React.FC<Props> = ({ 
-  text,
-  heading,
-  isotype = '',
-  negative = false,
-  vertical = false,
-}) => {
-  const classes = useStyles({ text, vertical, negative })
-  // TODO: replace into global material ui: theme
-  const backgroundColor = negative ? '#000' : '#FFF'
-  const color = negative ? '#FFF' : '#000'
+const Logotype:React.FC<Props> = ({ negative = false }) => {
+  const { state: logotype }: any = React.useContext(LogotypeContext)
+  const classes = useStyles({ layout: logotype.layout })
+  const backgroundColor = negative ? logotype.color : '#FFF'
+  const color = negative ? '#FFF' : logotype.color
   return (
     <Box>
-      {heading && (
-        <Box mb={2}>
-          <Typography>
-            {heading}
-          </Typography>
-        </Box>
-      )}
       <Card variant="outlined" elevation={0} className={classes.card} style={{ backgroundColor, color }}>
-        <Box display={vertical ? 'initial' : 'flex'} alignItems="center" justifyContent="center">
-          {isotype && (
+        <Box display={logotype.layout === 'LIV' ? 'initial' : 'flex'} alignItems="center" justifyContent="center">
+          {logotype.layout !== 'LOG' && (
             <Icon className={classes.isotype}>
-              {isotype}
+              {logotype.isotype}
             </Icon>
           )}
-          {text && (
-            <Typography variant="h2" component="div">
-              {text}
+          {logotype.layout !== 'ISO' && (
+            <Typography 
+              variant="h2" 
+              component="div" 
+              style={{ 
+                fontFamily: logotype.fontFamily,
+                fontWeight: logotype.fontWeight,
+                fontStyle: logotype.fontStyle
+              }}>
+              {logotype.name}
             </Typography>
           )}
         </Box>
       </Card>
+       {/* TODO:  outside other component */}
       <Box mt={3}>
-        <Button size="large" variant="outlined" color="primary">
+        <Button 
+          size="large" 
+          variant="outlined" 
+          color="primary"
+          className={classes.button}
+          endIcon={
+            <Icon style={{ fontSize: 14 }}>vertical_align_bottom</Icon>
+          }
+        >
           JPG
         </Button>
         &nbsp;&nbsp;

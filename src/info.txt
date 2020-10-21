@@ -12,7 +12,5 @@ https://gist.github.com/olavoasantos/24c71cef717865fb8186a9d62f1fcba0
 TODO:
 - Navigation layout: h, v, only
 - Cambiar Icon por import icon into all project
-- State managment with Redux: 
-  - Logotype: name, fontFamily, fontWeight, fontStyle, color, isotype (icon name), layout
 - Setting Isotype component (list Material icons )
 - Setting global color

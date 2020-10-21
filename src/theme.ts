@@ -2,12 +2,14 @@ import { createMuiTheme } from '@material-ui/core/styles'
 const theme = createMuiTheme({
   typography: {
     fontFamily: [
+      'Open Sans',
       'Montserrat',
       '"Helvetica Neue"',
       'Arial',
       'sans-serif'
     ].join(','),
-    fontWeightBold: 800
+    fontWeightRegular: 300,
+    fontWeightBold: 600
   },
   palette: {
     // type: 'dark',

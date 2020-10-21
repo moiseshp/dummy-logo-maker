@@ -1,8 +1,5 @@
 import React from 'react'
-import { Box, Card, CardHeader, Drawer, List, ListItem, ListItemText, Toolbar, ListItemSecondaryAction, IconButton, Divider  } from '@material-ui/core'
-import { ThreeDRotation } from '@material-ui/icons'
-import InvertColorsIcon from '@material-ui/icons/InvertColors'
-import { FormatColorFill } from '@material-ui/icons'
+import { Box, Card, Drawer, List, ListItem, ListItemText, Toolbar, ListItemSecondaryAction, IconButton  } from '@material-ui/core'
 import { useStyles } from './useStyles'
 
 const Sidebar = () => {
@@ -27,7 +24,7 @@ const Sidebar = () => {
                   <ListItemText primary="#000000" color="primary" />
                   <ListItemSecondaryAction>
                     <IconButton edge="end" aria-label="delete">
-                      <InvertColorsIcon color="primary" />
+                      {/* <InvertColorsIcon color="primary" /> */}
                     </IconButton>
                   </ListItemSecondaryAction>
                 </ListItem>

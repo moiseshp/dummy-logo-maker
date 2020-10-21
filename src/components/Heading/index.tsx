@@ -3,7 +3,7 @@ import { Box, Typography } from '@material-ui/core'
 import { useStyles } from './useStyles'
 
 type Props = {
-  text: string
+  text?: string
 }
 
 const Heading:React.FC<Props> = ({ text }) => {

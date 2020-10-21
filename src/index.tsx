@@ -1,15 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+import { LogotypeProvider } from './store/contexts/logotype'
 import * as serviceWorker from './serviceWorker'
-// import { ThemeProvider } from './store/contexts/theme'
-// import 'normalize.css'
-// import './styles.sass'
 
 ReactDOM.render(
-  // <ThemeProvider>
-    <App />,
-  // </ThemeProvider>,
+  <LogotypeProvider>
+    <App />
+  </LogotypeProvider>,
   document.getElementById('root')
 )
 

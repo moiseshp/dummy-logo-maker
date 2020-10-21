@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Toolbar } from '@material-ui/core'
+import { Toolbar } from '@material-ui/core'
 import Navbar from '../../components/Navbar'
 import ColorSetting from '../../components/ColorSetting'
 import LogoSection from './LogoSection'

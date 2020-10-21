@@ -2,36 +2,21 @@ import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    box: {
-      // marginBottom: theme.spacing(6),
-    },
-    card: ({ negative }: any) => ({
+    button: {
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    }, 
+    card: ({ layout, negative }: any) => ({
       textAlign: 'center',
-      padding: theme.spacing(16, 0)
-    
-      // display: 'flex',
-      // justifyItems: 'center',
-      // alignItems: 'center'
+      paddingTop: ['ISO', 'LIV'].includes(layout) ? theme.spacing(9) : theme.spacing(14),
+      paddingBottom: ['ISO', 'LIV'].includes(layout) ? theme.spacing(9) : theme.spacing(14) 
     }),
-    isotype: ({ vertical, text }: any) => ({
-      fontSize: vertical || !text ? 120 : 85,
+    isotype: ({ layout }: any) => ({
+      fontSize: ['ISO', 'LIV'].includes(layout) ? 160 : 90,
       display: 'block',
-      marginBottom: vertical ? theme.spacing(2) : 0,
-      marginRight: vertical ? 'auto' : theme.spacing(3),
-      marginLeft: vertical ? 'auto' : 0,
+      marginBottom: layout === 'LIV' ? theme.spacing(1) : 0,
+      marginRight: layout === 'LIV' ? 'auto' : theme.spacing(3),
+      marginLeft: layout === 'LIV' ? 'auto' : 0,
     })
-    // typography: {
-    //   position: 'relative',
-    //   display: 'inline-block',
-    //   '&::before': {
-    //     content: '""',
-    //     position: 'absolute',
-    //     backgroundColor: theme.palette.primary.main,
-    //     bottom: -15,
-    //     left: 0,
-    //     width: '40%',
-    //     height: 2,
-    //   }
-    // }
   })
 )
