@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Divider } from '@material-ui/core'
+import { Button, Divider, Typography } from '@material-ui/core'
 import { LogotypeContext } from '../../store/contexts/logotype'
 import { LOGOTYPE_STORE } from '../../store/types/logotype'
 import { useStyles } from './useStyles'
@@ -24,9 +24,9 @@ const Navigation = () => {
   }
   return (
     <React.Fragment>
-      <Box mr={2}>
+      <Typography variant="caption" className={classes.layoutText}>
         Select to Layout : 
-      </Box>
+      </Typography>
       {items.map((item, key) => (
         <React.Fragment key={item.id}>
           <Button 

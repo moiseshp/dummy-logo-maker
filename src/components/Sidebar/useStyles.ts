@@ -1,16 +1,14 @@
 import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 
-const drawerWidth = 500
-
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    drawer: {
-      width: drawerWidth,
+    drawer: ({ sidebar }): any => ({
+      width: sidebar.show ? sidebar.width : 0,
       flexShrink: 0,
-    },
-    drawerPaper: {
-      width: drawerWidth,
-    },
+    }),
+    drawerPaper: ({ sidebar }: any) => ({
+      width: sidebar.show ? sidebar.width : 0,
+    }),
     box: {
       height: '100%',
     },

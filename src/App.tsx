@@ -1,5 +1,4 @@
 import React from 'react'
-// import { ThemeContext } from './store/contexts/theme'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import Home from './pages/Home'

@@ -2,8 +2,10 @@ import { createStyles, Theme, makeStyles } from '@material-ui/core/styles'
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    icon: {
-      marginRight: theme.spacing(2)
+    layoutText: {
+      color: theme.palette.grey[500],
+      textTransform: 'uppercase',
+      marginRight: theme.spacing(3)
     },
     divider: {
       margin: theme.spacing(3, 2)

@@ -2,11 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { LogotypeProvider } from './store/contexts/logotype'
+import { SidebarProvider } from './store/contexts/sidebar'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <LogotypeProvider>
-    <App />
+    <SidebarProvider>
+      <App />
+    </SidebarProvider>
   </LogotypeProvider>,
   document.getElementById('root')
 )
