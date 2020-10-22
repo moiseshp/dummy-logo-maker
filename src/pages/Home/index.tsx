@@ -14,6 +14,7 @@ const Home = () => {
       <main className={classes.content}>
         <Toolbar />
         <LogoSection />
+        <Toolbar />
       </main>
       <Footer />
       <Sidebar />

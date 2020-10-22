@@ -5,7 +5,7 @@ import Logotype from '../../components/Logotype'
 
 const LogoSection = () => {
   return (
-    <Box pt={5}>
+    <Box py={5}>
       <Heading text={process.env.REACT_APP_NAME} />
       <Box mb={4}>
         <Typography variant="body1">
@@ -14,10 +14,10 @@ const LogoSection = () => {
       </Box>
 
       <Grid container spacing={3}>
-        <Grid item sm={12} lg={6}>
+        <Grid item md={12} lg={6}>
           <Logotype />
         </Grid>
-        <Grid item sm={12} lg={6}>
+        <Grid item md={12} lg={6}>
           <Logotype negative />
         </Grid>
       </Grid>

@@ -6,15 +6,23 @@ import LogotypeReset from './LogotypeReset'
 import LogotypeInput from './LogotypeInput'
 import LogotypeStyle from './LogotypeStyle'
 import LogotypeWeight from './LogotypeWeight'
+import LogotypeColor from './LogotypeColor'
 import SidebarButton from './SidebarButton'
 import { useStyles } from './useStyles'
 
 const Navbar = () => {
   const { state: sidebar }: any = React.useContext(SidebarContext)
   const classes = useStyles({ sidebar })
-
+  const CustomDivider = () => (
+    <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
+  ) 
   return (
-    <AppBar position="fixed" color="inherit" elevation={0} className={classes.root}>
+    <AppBar
+      position="fixed"
+      color="inherit"
+      elevation={0}
+      className={classes.root}
+    >
       <Toolbar>
 
         <Logotype />
@@ -25,18 +33,22 @@ const Navbar = () => {
           <LogotypeReset />
         </div>
 
-        <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
+        <CustomDivider />
 
         <LogotypeInput />
       
-        <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
+        <CustomDivider />
   
         <LogotypeWeight />
 
         <LogotypeStyle />
 
-        <Divider orientation="vertical" flexItem className={classes.dividerSmall} />
+        <CustomDivider />
 
+        <LogotypeColor />
+
+        <CustomDivider />
+        
         <SidebarButton />
         
       </Toolbar>

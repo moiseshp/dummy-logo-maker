@@ -9,7 +9,7 @@ const Footer = () => {
   const classes = useStyles({ sidebar })
   const date = new Date()
   return (
-    <AppBar className={classes.root} color="transparent" elevation={0}>
+    <AppBar className={classes.root} color="inherit" elevation={0}>
       <Toolbar>
         <Typography variant="caption" noWrap style={{ flexGrow: 1 }}>
           &copy; {date.getFullYear()} {process.env.REACT_APP_NAME} is powered by 

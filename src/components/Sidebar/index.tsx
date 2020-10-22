@@ -1,11 +1,23 @@
 import React from 'react'
-import { Box, Card, Drawer, List, ListItem, ListItemText, Toolbar, ListItemSecondaryAction, IconButton  } from '@material-ui/core'
+import { Box, Drawer, Grid, Toolbar, Button } from '@material-ui/core'
 import { SidebarContext } from '../../store/contexts/sidebar'
 import { useStyles } from './useStyles'
+import * as Sections from './sections'
 
+const sections = [
+  // { id: 'Color', text: 'Colors' },
+  { id: 'Icon', text: 'Icons' }
+]
 const Sidebar = () => {
+  const [active, setActive] = React.useState('Icon')
   const { state: sidebar }: any = React.useContext(SidebarContext)
   const classes = useStyles({ sidebar })
+
+  const ActiveSection = () => {
+    const AllSections: Record<string, any> = Sections
+    const DynamicSection = AllSections[active]
+    return <DynamicSection />
+  }
   return (
     <Drawer
       className={classes.drawer}
@@ -16,41 +28,27 @@ const Sidebar = () => {
       anchor="right"
     >
       <Toolbar>
-        Toolbar
+        <Grid container>
+          {sections.map(section => (
+            <Grid key={section.id} item sm={12}>
+              <Button
+                fullWidth
+                size="small"
+                onClick={() => setActive(section.id)}
+                disabled={section.id === active}
+                className={section.id === active ? classes.active : ''}
+              >
+                {section.text}
+              </Button>
+            </Grid>
+          ))}
+        </Grid>
       </Toolbar>
-      <Box className={classes.box} padding={3}>
-        <Card className={classes.cardWrapper} variant="outlined" style={{ background: '#000'}}>
-          {/* <Card className={classes.card} elevation={0}> */}
-            <List disablePadding>
-              <ListItem disableGutters>
-                <ListItemText primary="#000000" color="primary" />
-                <ListItemSecondaryAction>
-                  <IconButton edge="end" aria-label="delete">
-                    {/* <InvertColorsIcon color="primary" /> */}
-                  </IconButton>
-                </ListItemSecondaryAction>
-              </ListItem>
-            </List>
-          {/* </Card> */}
-        </Card>
+      <Box className={classes.box}>
+        <Box>
+          {ActiveSection}
+        </Box>
       </Box>
-      {/* <Divider />
-      <Box className={classes.box} padding={3}>
-        <Card className={classes.cardWrapper} variant="outlined" style={{ background: '#fff'}}>
-          <Card className={classes.card} elevation={0}>
-            <List disablePadding>
-              <ListItem disableGutters>
-                <ListItemText primary="Background color" secondary="#ffffff" />
-                <ListItemSecondaryAction>
-                  <IconButton edge="end" aria-label="delete">
-                    <FormatColorFill />
-                  </IconButton>
-                </ListItemSecondaryAction>
-              </ListItem>
-            </List>
-          </Card>
-        </Card>
-      </Box> */}
     </Drawer>
   )
 }

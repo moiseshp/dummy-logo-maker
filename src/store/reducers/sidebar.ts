@@ -9,7 +9,7 @@ export interface SidebarAction {
 
 export const initialState: ISidebar = {
   show: true,
-  width: 400
+  width: 300
 }
 
 export const reducer = (state: ISidebar, action: SidebarAction) => {

@@ -12,7 +12,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingBottom: ['ISO', 'LIV'].includes(layout) ? theme.spacing(9) : theme.spacing(14) 
     }),
     isotype: ({ layout }: any) => ({
-      fontSize: ['ISO', 'LIV'].includes(layout) ? 160 : 90,
+      fontSize: ['ISO', 'LIV'].includes(layout) ? 160 : 96,
       display: 'block',
       marginBottom: layout === 'LIV' ? theme.spacing(1) : 0,
       marginRight: layout === 'LIV' ? 'auto' : theme.spacing(3),

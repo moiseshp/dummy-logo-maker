@@ -1,6 +1,3 @@
-https://brand.uber.com/guide#logo-overview
-https://brand.linkedin.com/downloads
-
 https://github.com/tsayen/dom-to-image
 https://ourcodeworld.com/articles/read/38/how-to-capture-an-image-from-a-dom-element-with-javascript
 https://jsfiddle.net/ourcodeworld/85gtpcto/1/
@@ -9,8 +6,11 @@ https://www.npmjs.com/package/html-to-image
 All name material icons
 https://gist.github.com/olavoasantos/24c71cef717865fb8186a9d62f1fcba0
 
+Download ICONS or FONTS
+https://jsfiddle.net/sLc2kcwy/3/
+https://embed.plnkr.co/plunk/xMrRbM
+    
+
 TODO:
-- Navigation layout: h, v, only
-- Cambiar Icon por import icon into all project
-- Setting Isotype component (list Material icons )
 - Setting global color
+- Setting global font family
