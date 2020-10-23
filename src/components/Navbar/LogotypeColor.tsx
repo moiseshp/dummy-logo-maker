@@ -1,10 +1,10 @@
 import React from 'react'
-import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import { ColorPicker } from 'material-ui-color'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { ColorPicker, Color } from 'material-ui-color'
 import { LogotypeContext } from '../../store/contexts/logotype'
 import { LOGOTYPE_STORE } from '../../store/types/logotype'
 
-const useStyles = makeStyles((theme: Theme) =>
+const useStyles = makeStyles(() =>
   createStyles({
     root: {
       '& .MuiButtonBase-root': {
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const LogotypeColor = () => {
   const classes = useStyles()
   const { state: logotype, dispatch }: any = React.useContext(LogotypeContext)
-  const handleChange = (color: any) => {
+  const handleChange = (color: Color) => {
     dispatch({
       type: LOGOTYPE_STORE,
       payload: {

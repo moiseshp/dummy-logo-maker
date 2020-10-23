@@ -33,17 +33,10 @@ export const useStyles = makeStyles((theme: Theme) =>
         backgroundColor: theme.palette.grey[400],
       }
     },
-    // cardWrapper: {
-    //   height: '100%',
-    //   width: '100%',
-    //   display: 'inline-grid',
-    //   alignItems: 'flex-end',
-    //   padding: theme.spacing(2)
-    // },
     active: {
       fontWeight: theme.typography.fontWeightBold,
       '&.Mui-disabled': {
-        color: theme.palette.primary.main
+        color: theme.palette.common.black
       }
     }
   })

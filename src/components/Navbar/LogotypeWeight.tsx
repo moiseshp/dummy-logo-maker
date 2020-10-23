@@ -6,7 +6,7 @@ import { LOGOTYPE_STORE } from '../../store/types/logotype'
 const LogotypeStyle = () => {
   const { state: logotype, dispatch }: any = React.useContext(LogotypeContext)
   const isBold = logotype.fontWeight === 'bold'
-  const handleClick = () => {
+  const handleClick = (): void => {
     dispatch({
       type: LOGOTYPE_STORE,
       payload: {

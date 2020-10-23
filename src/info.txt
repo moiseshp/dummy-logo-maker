@@ -12,5 +12,4 @@ https://embed.plnkr.co/plunk/xMrRbM
     
 
 TODO:
-- Setting global color
-- Setting global font family
+- Setting sidebar with google font family

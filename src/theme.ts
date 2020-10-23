@@ -1,5 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles'
-const theme = createMuiTheme({
+const theme = {
   typography: {
     fontFamily: [
       'Open Sans',
@@ -9,23 +8,16 @@ const theme = createMuiTheme({
       'sans-serif'
     ].join(','),
     fontWeightRegular: 300,
-    fontWeightBold: 600
-  },
-  palette: {
-    // type: 'dark',
-    background: {
-      default: '#ffffff'
-    },
-    primary: {
-      main: '#000',
-      // light: '#757ce8',
-      // dark: '#002884',
-      // contrastText: '#fff'
-    },
-    secondary: {
-      main: '#ffba08',
+    fontWeightBold: 600,
+    button: {
+      // fontWeight: 800,
     },
   },
-})
+  props: {
+    MuiButton: {
+      disableElevation: true,
+    },
+  }
+}
 
 export default theme

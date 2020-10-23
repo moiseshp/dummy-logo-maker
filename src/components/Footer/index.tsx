@@ -17,6 +17,7 @@ const Footer = () => {
           <Link
             href={process.env.REACT_APP_GITHUB}
             target="_blank"
+            color="inherit"
           >
             <strong>{process.env.REACT_APP_SIGNATURE}</strong> 
           </Link>

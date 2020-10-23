@@ -23,8 +23,11 @@ const Icon = () => {
               fullWidth
               variant={name === logotype.isotype ? 'contained' : 'outlined'}
               disableElevation
-              style={{ paddingTop: 20, paddingBottom: 20 }}
-              // color="primary"
+              style={{ 
+                paddingTop: 20, 
+                paddingBottom: 20,
+              }}
+              color={name === logotype.isotype ? 'primary' : 'default'}
               onClick={() => handleClick(name)}
             >
               <MatIcon fontSize="large">{name}</MatIcon>
