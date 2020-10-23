@@ -9,7 +9,7 @@ const LogoSection = () => {
       <Heading text={process.env.REACT_APP_NAME} />
       <Box mb={4}>
         <Typography variant="body1">
-          Create your own logo or use the one that is ready!
+          Design and download your logo quickly, easily and fun!
         </Typography>
       </Box>
 
