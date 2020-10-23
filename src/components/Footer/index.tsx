@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Link, Toolbar, Typography } from '@material-ui/core'
+import { AppBar, Toolbar, Typography } from '@material-ui/core'
 import { SidebarContext } from '../../store/contexts/sidebar'
 import Navigation from '../../components/Navigation'
 import { useStyles } from './useStyles'
@@ -12,15 +12,8 @@ const Footer = () => {
     <AppBar className={classes.root} color="inherit" elevation={0}>
       <Toolbar>
         <Typography variant="caption" noWrap style={{ flexGrow: 1 }}>
-          &copy; {date.getFullYear()} {process.env.REACT_APP_NAME} is powered by 
-          &nbsp;
-          <Link
-            href={process.env.REACT_APP_GITHUB}
-            target="_blank"
-            color="inherit"
-          >
-            <strong>{process.env.REACT_APP_SIGNATURE}</strong> 
-          </Link>
+          {date.getFullYear()} &copy; 
+          &nbsp;{process.env.REACT_APP_NAME}          
         </Typography>
         <Navigation />
       </Toolbar>

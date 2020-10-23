@@ -11,7 +11,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       '&::before': {
         content: '""',
         position: 'absolute',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: theme.palette.common.black,
         bottom: -15,
         left: 0,
         width: '60%',

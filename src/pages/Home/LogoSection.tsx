@@ -1,15 +1,23 @@
 import React from 'react'
-import { Box, Grid, Typography } from '@material-ui/core'
+import { Box, Grid, Link, Typography } from '@material-ui/core'
 import Heading from '../../components/Heading'
 import Logotype from '../../components/Logotype'
 
 const LogoSection = () => {
   return (
     <Box py={5}>
-      <Heading text={process.env.REACT_APP_NAME} />
+      <Heading text="DUMMY LOGO MAKER" />
       <Box mb={4}>
-        <Typography variant="body1">
-          Design and download your logo quickly, easily and fun!
+        <Typography variant="body2">
+          Easy, fast and even fun! Created by 
+          &nbsp;
+          <Link
+            href={process.env.REACT_APP_GITHUB}
+            target="_blank"
+            color="inherit"
+          >
+            {process.env.REACT_APP_CREATED_BY}
+          </Link>
         </Typography>
       </Box>
 

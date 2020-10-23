@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Icon, Card, Typography } from '@material-ui/core'
 import { LogotypeContext } from '../../store/contexts/logotype'
-import Actions from './Actions'
+import ButtonList from './ButtonList'
 import { useStyles } from './useStyles'
 
 type Props = {
@@ -12,7 +12,7 @@ const Logotype:React.FC<Props> = ({ negative = false }) => {
   const { state: logotype }: any = React.useContext(LogotypeContext)
   const backgroundColor = negative ? logotype.color : '#FFF'
   const color = negative ? '#FFF' : logotype.color
-  const myRef = React.useRef() as React.MutableRefObject<HTMLDivElement>
+  const htmlDivElementRef = React.useRef() as React.MutableRefObject<HTMLDivElement>
   const classes = useStyles({ layout: logotype.layout })
 
   return (
@@ -23,7 +23,7 @@ const Logotype:React.FC<Props> = ({ negative = false }) => {
         className={classes.card} 
         style={{ backgroundColor, color }}
       >
-        <div className={classes.box} ref={myRef}>
+        <div className={classes.box} ref={htmlDivElementRef}>
           {logotype.layout !== 'LOG' && (
             <Icon className={classes.isotype}>
               {logotype.isotype}
@@ -44,9 +44,9 @@ const Logotype:React.FC<Props> = ({ negative = false }) => {
         </div>
       </Card>
 
-      <Box mt={3}>
-        <Actions 
-          myRef={myRef}
+      <Box component="footer" mt={3}>
+        <ButtonList 
+          htmlDivElementRef={htmlDivElementRef}
           backgroundColor={backgroundColor} 
         />
       </Box>

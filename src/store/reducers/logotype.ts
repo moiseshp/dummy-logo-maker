@@ -10,12 +10,12 @@ export interface LogotypeAction {
 }
 
 export const initialState: ILogotype = {
-  name: 'LOGODESIGN',
+  name: 'DUMMYLOGO',
   fontFamily: 'Montserrat',
   fontWeight: 'bold',
   fontStyle: 'normal',
   color: '#0033FF',
-  isotype: 'fingerprint',
+  isotype: 'qr_code',
   layout: 'LIH'
 }
 

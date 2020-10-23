@@ -18,6 +18,13 @@ export const useStyles = makeStyles((theme: Theme) =>
       marginBottom: layout === 'LIV' ? theme.spacing(1) : 0,
       marginRight: ['ISO', 'LIV'].includes(layout) ? 'auto' : theme.spacing(4),
       marginLeft: ['ISO', 'LIV'].includes(layout) ? 'auto' : 0,
-    })
+    }),
+    button: {
+      paddingLeft: 20,
+      paddingRight: 20,
+      '& .MuiIcon-root': {
+        marginRight: 15
+      }
+    }
   })
 )
