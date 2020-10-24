@@ -21,6 +21,10 @@ Enter **[dummy-logo-maker](https://moiseshp.github.io/dummy-logo-maker/)** page 
  - [Material Icons](https://material.io/resources/icons/?style=baseline)
  - [Dom To Image](https://github.com/tsayen/dom-to-image)
 
+## TODO
+ - Add more icons.
+ - Change typography - Google Fonts
+
 ##  Authors
 Moisés Huaringa
 
