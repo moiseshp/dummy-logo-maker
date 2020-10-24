@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dummy-logo-maker/precache-manifest.27c023fdf1370162476a1dbee64d8795.js"
+  "/dummy-logo-maker/precache-manifest.bfa3e18352948594e12c910029817f88.js"
 );
 
 self.addEventListener('message', (event) => {
