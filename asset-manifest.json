@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/dummy-logo-maker/static/js/main.eda13966.chunk.js",
-    "main.js.map": "/dummy-logo-maker/static/js/main.eda13966.chunk.js.map",
+    "main.js": "/dummy-logo-maker/static/js/main.2d9986df.chunk.js",
+    "main.js.map": "/dummy-logo-maker/static/js/main.2d9986df.chunk.js.map",
     "runtime-main.js": "/dummy-logo-maker/static/js/runtime-main.e8cf880e.js",
     "runtime-main.js.map": "/dummy-logo-maker/static/js/runtime-main.e8cf880e.js.map",
-    "static/js/2.929813fd.chunk.js": "/dummy-logo-maker/static/js/2.929813fd.chunk.js",
-    "static/js/2.929813fd.chunk.js.map": "/dummy-logo-maker/static/js/2.929813fd.chunk.js.map",
+    "static/js/2.90234ad5.chunk.js": "/dummy-logo-maker/static/js/2.90234ad5.chunk.js",
+    "static/js/2.90234ad5.chunk.js.map": "/dummy-logo-maker/static/js/2.90234ad5.chunk.js.map",
     "index.html": "/dummy-logo-maker/index.html",
-    "precache-manifest.bfa3e18352948594e12c910029817f88.js": "/dummy-logo-maker/precache-manifest.bfa3e18352948594e12c910029817f88.js",
+    "precache-manifest.ced012a0e43faa3e94940fe7e96e41a9.js": "/dummy-logo-maker/precache-manifest.ced012a0e43faa3e94940fe7e96e41a9.js",
     "service-worker.js": "/dummy-logo-maker/service-worker.js",
-    "static/js/2.929813fd.chunk.js.LICENSE.txt": "/dummy-logo-maker/static/js/2.929813fd.chunk.js.LICENSE.txt"
+    "static/js/2.90234ad5.chunk.js.LICENSE.txt": "/dummy-logo-maker/static/js/2.90234ad5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e8cf880e.js",
-    "static/js/2.929813fd.chunk.js",
-    "static/js/main.eda13966.chunk.js"
+    "static/js/2.90234ad5.chunk.js",
+    "static/js/main.2d9986df.chunk.js"
   ]
 }
