@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "089d3f57901e1dbd2e996fb39a96f3e0",
+    "revision": "4935dc40ec27cd6e92d97729c5922a2c",
     "url": "/dummy-logo-maker/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dummy-logo-maker/static/js/2.2bdddb31.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ad26daff254247b78193",
-    "url": "/dummy-logo-maker/static/js/main.2fd398bb.chunk.js"
+    "revision": "2868c9370d21c09d8737",
+    "url": "/dummy-logo-maker/static/js/main.7c22f50e.chunk.js"
   },
   {
     "revision": "ef3b97a40e1996e23de7",
