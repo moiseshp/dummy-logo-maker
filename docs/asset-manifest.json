@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/static/js/main.fe70f622.chunk.js",
-    "main.js.map": "/static/js/main.fe70f622.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.92ee656d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.92ee656d.js.map",
-    "static/js/2.f10c17c7.chunk.js": "/static/js/2.f10c17c7.chunk.js",
-    "static/js/2.f10c17c7.chunk.js.map": "/static/js/2.f10c17c7.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.549da68131c6ad889305f72b91fce248.js": "/precache-manifest.549da68131c6ad889305f72b91fce248.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.f10c17c7.chunk.js.LICENSE.txt": "/static/js/2.f10c17c7.chunk.js.LICENSE.txt"
+    "main.js": "/dummy-logo-maker/static/js/main.eda13966.chunk.js",
+    "main.js.map": "/dummy-logo-maker/static/js/main.eda13966.chunk.js.map",
+    "runtime-main.js": "/dummy-logo-maker/static/js/runtime-main.e8cf880e.js",
+    "runtime-main.js.map": "/dummy-logo-maker/static/js/runtime-main.e8cf880e.js.map",
+    "static/js/2.929813fd.chunk.js": "/dummy-logo-maker/static/js/2.929813fd.chunk.js",
+    "static/js/2.929813fd.chunk.js.map": "/dummy-logo-maker/static/js/2.929813fd.chunk.js.map",
+    "index.html": "/dummy-logo-maker/index.html",
+    "precache-manifest.13057744979dd5515e7ed6e3e10f0428.js": "/dummy-logo-maker/precache-manifest.13057744979dd5515e7ed6e3e10f0428.js",
+    "service-worker.js": "/dummy-logo-maker/service-worker.js",
+    "static/js/2.929813fd.chunk.js.LICENSE.txt": "/dummy-logo-maker/static/js/2.929813fd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.92ee656d.js",
-    "static/js/2.f10c17c7.chunk.js",
-    "static/js/main.fe70f622.chunk.js"
+    "static/js/runtime-main.e8cf880e.js",
+    "static/js/2.929813fd.chunk.js",
+    "static/js/main.eda13966.chunk.js"
   ]
 }
