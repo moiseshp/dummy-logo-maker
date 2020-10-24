@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       paddingBottom: ['ISO', 'LIV'].includes(layout) ? theme.spacing(9) : theme.spacing(14) 
     }),
     box: ({ layout }: any) => ({
-      display: layout === 'LIV' ? 'initial' : 'inline-flex', 
+      display: layout === 'LIV' ? 'inline-grid' : 'inline-flex', 
       alignItems: 'center', 
       justifyContent: 'center'
     }),
