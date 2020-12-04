@@ -12,7 +12,7 @@ const LogoSection = () => {
           Easy, fast and even fun! Created by 
           &nbsp;
           <Link
-            href={process.env.REACT_APP_GITHUB}
+            href={process.env.REACT_APP_TWITTER}
             target="_blank"
             color="inherit"
           >
