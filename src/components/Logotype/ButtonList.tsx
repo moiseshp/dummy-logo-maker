@@ -1,7 +1,20 @@
 import React from 'react'
 import { Button, Icon } from '@material-ui/core'
 import { domToImage } from '../../utlis/domToImage'
-import { useStyles } from './useStyles'
+import { createStyles, makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    button: {
+      paddingLeft: 20,
+      paddingRight: 20,
+      '& .MuiIcon-root': {
+        marginRight: 15
+      }
+    }
+  })
+)
+
 interface IType {
   id: string,
   text: string
@@ -9,8 +22,7 @@ interface IType {
 
 const types: IType[] = [
   { id: 'jpeg', text: 'JPG' },
-  { id: 'png', text: 'PNG' },
-  // { id: 'svg', text: 'SVG' }
+  { id: 'png', text: 'PNG' }
 ]
 
 type Props = {

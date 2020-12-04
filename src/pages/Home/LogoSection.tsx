@@ -16,7 +16,7 @@ const LogoSection = () => {
             target="_blank"
             color="inherit"
           >
-            {process.env.REACT_APP_CREATED_BY}
+            <strong>{process.env.REACT_APP_CREATED_BY}</strong>
           </Link>
         </Typography>
       </Box>

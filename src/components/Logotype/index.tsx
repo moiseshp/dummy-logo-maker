@@ -20,7 +20,7 @@ const Logotype:React.FC<Props> = ({ negative = false }) => {
       <Card
         variant="outlined" 
         elevation={0} 
-        className={classes.card} 
+        className={classes.card}
         style={{ backgroundColor, color }}
       >
         <div className={classes.box} ref={htmlDivElementRef}>
