@@ -1,0 +1,8 @@
+{
+  "extends": ["next/core-web-vitals", "react-important-stuff", "plugin:prettier/recommended"],
+  "plugins": ["react-hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}

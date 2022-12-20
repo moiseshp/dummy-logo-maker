@@ -1,54 +1,32 @@
 {
-  "homepage": "https://moiseshp.github.io/dummy-logo-maker/",
-  "name": "app",
-  "version": "0.1.0",
+  "name": "dummy-logo-maker",
+  "version": "0.0.1",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.11.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/dom-to-image": "^2.6.2",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "dom-to-image": "^2.6.0",
-    "material-ui-color": "^0.4.6",
-    "material-ui-popup-state": "^1.7.0",
-    "node-sass": "^4.14.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-ga": "^3.2.0",
-    "react-scripts": "^3.4.4",
-    "styled-components": "^5.2.0",
-    "typescript": "~3.7.2"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install",
+    "format": "prettier --write",
+    "check-format": "prettier --check ."
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@next/font": "13.0.7",
+    "next": "13.0.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "eslint": "8.30.0",
+    "eslint-config-next": "13.0.7",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-important-stuff": "^3.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.2",
+    "prettier": "^2.8.1",
+    "prettier-quick": "0.0.5"
   }
 }
