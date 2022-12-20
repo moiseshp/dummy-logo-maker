@@ -6,7 +6,7 @@ export const builder = (theme) => {
       ...acc,
       [item]: numberToRem(theme.typography.variants[item]),
     }),
-    {}
+    {},
   );
 
   const buttonSize = Object.keys(theme.button.size).reduce(
@@ -14,7 +14,7 @@ export const builder = (theme) => {
       ...acc,
       [item]: numberToRem(theme.button.size[item]),
     }),
-    {}
+    {},
   );
 
   return {
