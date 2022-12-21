@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Tool4 = () => {
+const Icon = () => {
   return (
     <div>
-      <h1>Tool4</h1>
+      <div>Icon</div>
       <p>Sit amet dolor</p>
     </div>
   );
 };
 
-export default Tool4;
+export default Icon;

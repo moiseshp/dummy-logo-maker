@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Tool1 = () => {
+const Text = () => {
   return (
     <div>
-      <h1>Tool1</h1>
+      <div>Text</div>
       <p>Lorem ipsum</p>
     </div>
   );
 };
 
-export default Tool1;
+export default Text;

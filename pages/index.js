@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import MakerLayout from 'layouts/Maker';
+import MainLayout from 'layouts/Main';
 
 const Home = () => {
   return (
@@ -39,6 +39,6 @@ const Home = () => {
   );
 };
 
-Home.getLayout = (page) => <MakerLayout>{page}</MakerLayout>;
+Home.getLayout = (page) => <MainLayout>{page}</MainLayout>;
 
 export default Home;
