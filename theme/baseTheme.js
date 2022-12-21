@@ -15,7 +15,7 @@ export const baseTheme = {
     textSecondary: '#6C757D',
     disabled: '#b5bfc9', // CED4DA
     grayLight: '#e3eaf2',
-    body: '#fff',
+    body: '#fafafa',
   },
   typography: {
     htmlFontSize: '62.5%', // equivalent to 16px
