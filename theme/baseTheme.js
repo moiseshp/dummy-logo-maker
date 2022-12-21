@@ -18,7 +18,8 @@ export const baseTheme = {
     body: '#fafafa',
   },
   typography: {
-    htmlFontSize: '62.5%', // equivalent to 16px
+    // Default 100% is 16px. All rem will adapt accordingly if user changes browser font size.
+    htmlFontSize: '62.5%',
     fontSize: 16,
     regular: 400,
     bolder: 500,

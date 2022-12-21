@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import styled, { css } from 'styled-components';
-
+import SoccerIcon from '@icons/Soccer';
+import * as tools from './tools';
 const routes = [
   {
     icon: '',
@@ -28,6 +29,7 @@ const StyledSidebar = styled.aside`
   width: 370px;
   /* border-right: 1px solid #eee; */
   box-sizing: content-box;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.03);
 `;
 
 const StyledMenuItems = styled.nav`
@@ -55,36 +57,75 @@ const StyledItem = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: ${({ isActive }) => (isActive ? 'red' : 'black')};
+  /* border: ${({ isActive }) => (isActive ? 1 : 0)}px solid #eee;
+  border-right: ${({ isActive }) => (isActive ? 1 : 0)}px solid white; */
 `;
 
-const StyledBrand = styled.div`
-  height: 70px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
+const StyledBrandItem = styled(StyledItem)`
   border-bottom: 1px solid #eee;
 `;
 
+const StyledMainContent = styled.main`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledBrandBox = styled.div`
+  /* border: 1px solid #eee; */
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.05);
+`;
+
 const Maker = ({ children }) => {
+  const [currentToolId, setCurrentToolId] = useState('Tool1');
+  const Tool = tools[currentToolId];
+
   useEffect(() => {
-    console.info('render!!!');
-  }, []);
+    console.info({ currentToolId });
+  }, [currentToolId]);
 
   return (
     <>
       <StyledSidebar>
         {/* <StyledBrand>Dummy Logo Maker</StyledBrand> */}
         <StyledMenuItems>
-          <StyledItem>L</StyledItem>
+          <StyledBrandItem>L</StyledBrandItem>
           {[...Array(4).keys()].map((item) => (
-            <StyledItem key={item}>M</StyledItem>
+            <StyledItem
+              key={item}
+              isActive={Boolean(currentToolId === `Tool${item + 1}`)}
+              onClick={() => setCurrentToolId(`Tool${item + 1}`)}
+            >
+              <div>
+                <div>
+                  <SoccerIcon />
+                </div>
+                <div>TEXT</div>
+              </div>
+            </StyledItem>
           ))}
         </StyledMenuItems>
-        <StyledTools>Tools</StyledTools>
+        <StyledTools>{currentToolId && <Tool />}</StyledTools>
       </StyledSidebar>
-      <main>{children}</main>
+      <StyledMainContent>
+        <StyledBrandBox>
+          <div>{children}</div>
+          <div>Tools</div>
+        </StyledBrandBox>
+      </StyledMainContent>
     </>
   );
 };
