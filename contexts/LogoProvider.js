@@ -1,42 +1,41 @@
-import { createContext, useContext, useReducer } from 'react';
+// https://dev.to/edisonsanchez/next-js-react-con-context-api-3a05
+import { createContext, useContext, useEffect, useMemo, useState } from 'react';
+import storage from 'utils/storage';
 
-const LogoContext = createContext();
-
-const logoReducer = (state, action) => {
-  switch (action.type) {
-    case 'increment': {
-      return { name: 'Moisés Huaringa' };
-    }
-    case 'decrement': {
-      return { name: 'Eduardo' };
-    }
-    default: {
-      throw new Error('action type not found');
-    }
-  }
-};
+const LogoContext = createContext(null);
 
 const initLogo = {
   color: 'red',
   fontFamily: 'Arial',
   backgroundColor: 'yellow',
-  iconName: 'IconName',
+  iconName: 'Icon-Name',
   iconColor: 'purple',
-  id: '4RQGe7YgWvCEHY0VYji2',
   layout: 'logo',
   text: 'DummyLogo',
 };
 
-// https://dev.to/edisonsanchez/next-js-react-con-context-api-3a05
 const LogoProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(logoReducer, initLogo);
-  const value = { state, dispatch };
+  const [logo, setLogo] = useState(initLogo);
+  const updateLogo = (value) => {
+    const data = { ...logo, ...value };
+    setLogo(data);
+    storage.set(data);
+  };
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const value = useMemo(() => [logo, updateLogo], [logo]);
+
+  useEffect(() => {
+    if (!storage.get()) return;
+    setLogo(storage.get());
+  }, []);
+
   return <LogoContext.Provider value={value}>{children}</LogoContext.Provider>;
 };
 
 export const useLogo = () => {
   const context = useContext(LogoContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useLogo must be used within a LogoProvider');
   }
   return context;

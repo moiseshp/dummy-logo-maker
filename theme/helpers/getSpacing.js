@@ -1,6 +1,6 @@
 import { baseTheme } from '../baseTheme';
-import { numberToRem } from './numberToRem';
+import { getRem } from './getRem';
 
 export const getSpacing = (value) => {
-  return numberToRem(baseTheme.mixins.spacing * value);
+  return getRem(baseTheme.mixins.spacing * value);
 };

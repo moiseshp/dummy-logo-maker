@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
-import UserProvider from 'contexts/UserProvider';
+import LogoProvider from 'contexts/LogoProvider';
 import { GlobalStyleSheet } from 'theme/GlobalStyleSheet';
 // eslint-disable-next-line camelcase
 import { Open_Sans } from '@next/font/google';
@@ -24,16 +24,16 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <UserProvider>
-        <Head>
-          <title>Dummy Logo Maker</title>
-          <meta name="theme-color" content={theme.pallete.body} />
-        </Head>
-        <main className={roboto.className}>
-          <GlobalStyleSheet />
+      <Head>
+        <title>Dummy Logo Maker</title>
+        <meta name="theme-color" content={theme.pallete.body} />
+      </Head>
+      <GlobalStyleSheet />
+      <LogoProvider>
+        <div className={roboto.className}>
           {isMounted ? getLayout(<Component {...pageProps} />) : <div>Loading...</div>}
-        </main>
-      </UserProvider>
+        </div>
+      </LogoProvider>
     </ThemeProvider>
   );
 };

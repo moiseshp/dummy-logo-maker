@@ -3,7 +3,7 @@
 
 const INIT_FONT_SIZE = 10;
 
-export const numberToRem = (value) => {
+export const getRem = (value) => {
   if (typeof value !== 'number') return value;
   return `${value / INIT_FONT_SIZE}rem`;
 };

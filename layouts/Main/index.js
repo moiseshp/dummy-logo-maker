@@ -33,7 +33,7 @@ const menuItems = [
   },
 ];
 
-const Main = () => {
+const Main = ({ children }) => {
   const [currentToolView, setCurrentToolView] = useState(menuItems[0].name);
   const ToolView = views[currentToolView];
 
@@ -66,7 +66,7 @@ const Main = () => {
       </Sidebar>
       <MainContent>
         <LogoBoxContainer>
-          <LogoBox>Logo</LogoBox>
+          <LogoBox>{children}</LogoBox>
           <div>Sizing | Zoom | Download Button</div>
         </LogoBoxContainer>
       </MainContent>

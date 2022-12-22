@@ -1,10 +1,10 @@
-import { numberToRem } from './helpers/numberToRem';
+import { getRem } from './helpers/getRem';
 
 export const builder = (theme) => {
   const variants = Object.keys(theme.typography.variants).reduce(
     (acc, item) => ({
       ...acc,
-      [item]: numberToRem(theme.typography.variants[item]),
+      [item]: getRem(theme.typography.variants[item]),
     }),
     {},
   );
@@ -12,7 +12,7 @@ export const builder = (theme) => {
   const buttonSize = Object.keys(theme.button.size).reduce(
     (acc, item) => ({
       ...acc,
-      [item]: numberToRem(theme.button.size[item]),
+      [item]: getRem(theme.button.size[item]),
     }),
     {},
   );
@@ -21,11 +21,11 @@ export const builder = (theme) => {
     ...theme,
     icon: {
       ...theme.icon,
-      size: numberToRem(theme.icon.size),
+      size: getRem(theme.icon.size),
     },
     typography: {
       ...theme.typography,
-      fontSize: numberToRem(theme.typography.fontSize),
+      fontSize: getRem(theme.typography.fontSize),
       variants,
     },
     button: {
@@ -34,14 +34,14 @@ export const builder = (theme) => {
     },
     shape: {
       ...theme.shape,
-      borderRadius: numberToRem(theme.shape.borderRadius),
+      borderRadius: getRem(theme.shape.borderRadius),
     },
     mixins: {
       ...theme.mixins,
-      spacing: numberToRem(theme.mixins.spacing),
+      spacing: getRem(theme.mixins.spacing),
       toolbar: {
         ...theme.mixins.toolbar,
-        minHeight: numberToRem(theme.mixins.toolbar.minHeight),
+        minHeight: getRem(theme.mixins.toolbar.minHeight),
       },
     },
   };
