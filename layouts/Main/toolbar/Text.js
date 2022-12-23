@@ -27,8 +27,8 @@ const Text = () => {
         onChange={(e) => updateLogo({ fontFamily: e.target.value })}
       >
         <option value="Ubuntu">Ubuntu</option>
-        <option value="Arial">Arial</option>
-        <option value="OpenSans">Open Sans</option>
+        <option value="Josefin_Slab">Josefin Slab</option>
+        <option value="Montserrat">Montserrat</option>
       </select>
     </div>
   );

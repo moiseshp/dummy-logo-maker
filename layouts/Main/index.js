@@ -5,8 +5,8 @@ import MenuBar from 'layouts/Main/components/MenuBar';
 import MenuItem from 'layouts/Main/components/MenuItem';
 import Sidebar from 'layouts/Main/components/Sidebar';
 import ToolContainer from 'layouts/Main/components/ToolContainer';
-import SoccerIcon from '@icons/Soccer';
-import * as views from 'layouts/Main/views';
+// import SoccerIcon from '@icons/Soccer';
+import * as toolbar from 'layouts/Main/toolbar';
 import LogoBoxContainer from 'layouts/Main/components/LogoBoxContainer';
 import LogoBox from 'layouts/Main/components/LogoBox';
 
@@ -34,8 +34,8 @@ const menuItems = [
 ];
 
 const Main = ({ children }) => {
-  const [currentToolView, setCurrentToolView] = useState(menuItems[0].name);
-  const ToolView = views[currentToolView];
+  const [activeToolbar, setActiveToolbar] = useState('Text');
+  const Toolbar = toolbar[activeToolbar];
 
   return (
     <>
@@ -45,15 +45,16 @@ const Main = ({ children }) => {
           {menuItems.map(({ name }) => (
             <MenuItem
               key={name}
-              isActive={Boolean(currentToolView === name)}
+              isActive={Boolean(activeToolbar === name)}
               onClick={() => {
                 console.info(name);
-                setCurrentToolView(name);
+                setActiveToolbar(name);
               }}
             >
               <div>
                 <div>
-                  <SoccerIcon />
+                  Icon
+                  {/* <SoccerIcon /> */}
                 </div>
                 <div>{name}</div>
               </div>
@@ -61,7 +62,7 @@ const Main = ({ children }) => {
           ))}
         </MenuBar>
         <ToolContainer>
-          <ToolView />
+          <Toolbar />
         </ToolContainer>
       </Sidebar>
       <MainContent>

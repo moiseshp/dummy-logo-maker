@@ -1,11 +1,12 @@
+import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 
 const StyledIcon = styled.svg`
-  ${({ theme, color }) =>
+  ${({ theme, size, color }) =>
     css`
-      width: ${theme.icon.size};
-      height: ${theme.icon.size};
-      fill: ${theme.helpers.getColor(color)};
+      width: ${theme.helpers.getRem(size)};
+      height: ${theme.helpers.getRem(size)};
+      fill: ${color};
     `}
 `;
 
@@ -19,6 +20,12 @@ const Icon = ({ children, ...rest }) => {
 
 Icon.defaultProps = {
   color: 'currentColor',
+  size: 24,
+};
+
+Icon.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string,
 };
 
 export default Icon;

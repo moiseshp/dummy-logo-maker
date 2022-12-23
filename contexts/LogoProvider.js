@@ -6,9 +6,9 @@ const LogoContext = createContext(null);
 
 const initLogo = {
   color: 'red',
-  fontFamily: 'Arial',
+  fontFamily: 'Montserrat',
   backgroundColor: 'yellow',
-  iconName: 'Icon-Name',
+  iconId: 'Dolphin',
   iconColor: 'purple',
   layout: 'logo',
   text: 'DummyLogo',

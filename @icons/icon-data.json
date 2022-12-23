@@ -1,0 +1,11 @@
+[
+  { "id": "Bat", "name": "Bat", "tags": ["Nature", "Animal", "Holiday"] },
+  { "id": "Bird", "name": "Bird", "tags": ["Nature", "Animal"] },
+  { "id": "Bug", "name": "Bug", "tags": ["Nature", "Animal"] },
+  { "id": "Butterfly", "name": "Butterfly", "tags": ["Nature", "Animal"] },
+  { "id": "Cat", "name": "Cat", "tags": ["Nature", "Animal", "Holiday"] },
+  { "id": "Cow", "name": "Cow", "tags": ["Nature", "Animal", "Agriculture"] },
+  { "id": "Dog", "name": "Dog", "tags": ["Animal"] },
+  { "id": "Dolphin", "name": "Dolphin", "tags": ["Animal"] },
+  { "id": "Spider", "name": "Spider", "tags": ["Animal", "Holiday", "Nature"] }
+]
