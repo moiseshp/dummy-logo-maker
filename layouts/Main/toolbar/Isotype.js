@@ -2,11 +2,11 @@ import * as icons from 'components/icons';
 import iconData from 'components/icons/icon-data.json';
 import { useLogo } from 'contexts/LogoProvider';
 
-const Icon = () => {
+const Isotype = () => {
   const [logo, updateLogo] = useLogo();
   return (
     <div>
-      <div>Icon</div>
+      <div>Isotype</div>
       <p>Sit amet dolor</p>
       {iconData.map(({ id, name }) => {
         const MyIcon = icons[id];
@@ -23,4 +23,4 @@ const Icon = () => {
   );
 };
 
-export default Icon;
+export default Isotype;

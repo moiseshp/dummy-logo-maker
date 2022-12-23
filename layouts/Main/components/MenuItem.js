@@ -9,6 +9,7 @@ const StyledMenuItem = styled.div`
   text-align: center;
   font-size: ${({ theme }) => theme.typography.variants.caption};
   color: ${({ theme, isActive }) => (isActive ? theme.pallete.primary : 'currentColor')};
+  font-weight: ${({ theme }) => theme.typography.bolder};
 `;
 
 const MenuItem = ({ children, ...rest }) => {

@@ -1,3 +1,8 @@
+/**
+ * Icons based in react-icons + Tabler Icons
+ * https://react-icons.github.io/react-icons/icons?name=tb
+ */
+
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 

@@ -9,7 +9,7 @@ import LogoBoxContainer from 'layouts/Main/components/LogoBoxContainer';
 import LogoBox from 'layouts/Main/components/LogoBox';
 import PencilRulerIcon from 'components/icons/components/PencilRuler';
 import TypographyIcon from '@icons/components/Typography';
-import IconsIcon from '@icons/components/Icons';
+import ChartBubbleIcon from '@icons/components/ChartBubble';
 import SquaresFilledIcon from '@icons/components/SquaresFilled';
 import LayoutDashboardIcon from '@icons/components/LayoutDashboard';
 import * as toolbar from 'layouts/Main/toolbar';
@@ -21,8 +21,8 @@ const menuItems = [
     pathname: '/groups/[groupId]/championships/[championshipId]',
   },
   {
-    icon: <IconsIcon />,
-    name: 'Icon',
+    icon: <ChartBubbleIcon />,
+    name: 'Isotype',
     pathname: '/groups/[groupId]/championships/[championshipId]/stats',
   },
   {
