@@ -5,9 +5,9 @@ import storage from 'utils/storage';
 const LogoContext = createContext(null);
 
 const initLogo = {
-  color: 'red',
+  color: '#FF0000',
   fontFamily: 'Montserrat',
-  backgroundColor: 'yellow',
+  backgroundColor: '#00FF00',
   iconId: 'Dolphin',
   iconColor: 'purple',
   layout: 'logo',

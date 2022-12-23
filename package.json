@@ -15,6 +15,7 @@
     "@next/font": "13.0.7",
     "next": "13.0.7",
     "react": "18.2.0",
+    "react-color-palette": "^6.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.6"
   },

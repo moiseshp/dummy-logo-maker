@@ -1,4 +1,4 @@
-import Icon from '@icons/Icon';
+import Icon from '../Icon';
 
 const Cat = (props) => {
   return (

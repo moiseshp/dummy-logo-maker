@@ -19,46 +19,46 @@ import {
 import Head from 'next/head';
 import theme from 'theme';
 
-const roboto = Open_Sans({
-  weight: ['400', '500', '800'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
+const openSans = Open_Sans({
+  // weight: ['400', '600', '700'],
+  // style: ['normal', 'italic'],
+  // subsets: ['latin'],
 });
 
 const montserrat = Montserrat({
-  weight: ['400', '500', '800'],
+  // weight: ['400', '500', '800'],
   style: ['normal'],
-  subsets: ['latin'],
+  // subsets: ['latin'],
 });
 
 const josefinSlab = Josefin_Slab({
   weight: ['400', '500', '700'],
   style: ['normal'],
-  subsets: ['latin'],
+  // subsets: ['latin'],
 });
 
 const dancingScript = Dancing_Script({
   weight: ['400', '700'],
   style: ['normal'],
-  subsets: ['latin'],
+  // subsets: ['latin'],
 });
 
 const tangerine = Tangerine({
   weight: ['400', '700'],
   style: ['normal'],
-  subsets: ['latin'],
+  // subsets: ['latin'],
 });
 
 const courierPrime = Courier_Prime({
   weight: ['400', '700'],
   style: ['normal'],
-  subsets: ['latin'],
+  // subsets: ['latin'],
 });
 
 const ubuntuMono = Ubuntu_Mono({
   weight: ['400', '700'],
   style: ['normal'],
-  subsets: ['latin'],
+  // subsets: ['latin'],
 });
 
 const MyApp = ({ Component, pageProps }) => {
@@ -76,10 +76,11 @@ const MyApp = ({ Component, pageProps }) => {
         <meta name="theme-color" content={theme.pallete.body} />
       </Head>
       <GlobalStyleSheet />
-      <style jsx global>
-        {`
+
+      <LogoProvider>
+        <style jsx global>{`
           html {
-            font-family: ${roboto.style.fontFamily};
+            font-family: ${openSans.style.fontFamily};
           }
           .Josefin_Slab {
             font-family: ${josefinSlab.style.fontFamily};
@@ -87,10 +88,7 @@ const MyApp = ({ Component, pageProps }) => {
           .Montserrat {
             font-family: ${montserrat.style.fontFamily};
           }
-        `}
-      </style>
-
-      <LogoProvider>
+        `}</style>
         {isMounted ? getLayout(<Component {...pageProps} />) : <div>Loading...</div>}
       </LogoProvider>
     </ThemeProvider>

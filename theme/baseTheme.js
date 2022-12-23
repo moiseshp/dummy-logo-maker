@@ -22,8 +22,8 @@ export const baseTheme = {
     htmlFontSize: '62.5%',
     fontSize: 16,
     regular: 400,
-    bolder: 500,
-    bold: 800,
+    bolder: 600,
+    bold: 700,
     variants: {
       h1: 40,
       h2: 36,

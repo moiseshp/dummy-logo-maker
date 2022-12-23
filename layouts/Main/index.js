@@ -5,30 +5,34 @@ import MenuBar from 'layouts/Main/components/MenuBar';
 import MenuItem from 'layouts/Main/components/MenuItem';
 import Sidebar from 'layouts/Main/components/Sidebar';
 import ToolContainer from 'layouts/Main/components/ToolContainer';
-// import SoccerIcon from '@icons/Soccer';
-import * as toolbar from 'layouts/Main/toolbar';
 import LogoBoxContainer from 'layouts/Main/components/LogoBoxContainer';
 import LogoBox from 'layouts/Main/components/LogoBox';
+import PencilRulerIcon from 'components/icons/components/PencilRuler';
+import TypographyIcon from '@icons/components/Typography';
+import IconsIcon from '@icons/components/Icons';
+import SquaresFilledIcon from '@icons/components/SquaresFilled';
+import LayoutDashboardIcon from '@icons/components/LayoutDashboard';
+import * as toolbar from 'layouts/Main/toolbar';
 
 const menuItems = [
   {
-    icon: '',
+    icon: <TypographyIcon />,
     name: 'Text',
     pathname: '/groups/[groupId]/championships/[championshipId]',
   },
   {
-    icon: '',
+    icon: <IconsIcon />,
     name: 'Icon',
     pathname: '/groups/[groupId]/championships/[championshipId]/stats',
   },
   {
-    icon: '',
-    name: 'Layout',
+    icon: <SquaresFilledIcon />,
+    name: 'Filled',
     pathname: '/groups/[groupId]/championships/[championshipId]/matches',
   },
   {
-    icon: '',
-    name: 'Background',
+    icon: <LayoutDashboardIcon />,
+    name: 'Layout',
     pathname: '/groups/[groupId]/championships/[championshipId]/matches',
   },
 ];
@@ -41,21 +45,17 @@ const Main = ({ children }) => {
     <>
       <Sidebar>
         <MenuBar>
-          <BrandItem>B</BrandItem>
-          {menuItems.map(({ name }) => (
+          <BrandItem>
+            <PencilRulerIcon size={34} />
+          </BrandItem>
+          {menuItems.map(({ icon, name }) => (
             <MenuItem
               key={name}
               isActive={Boolean(activeToolbar === name)}
-              onClick={() => {
-                console.info(name);
-                setActiveToolbar(name);
-              }}
+              onClick={() => setActiveToolbar(name)}
             >
               <div>
-                <div>
-                  Icon
-                  {/* <SoccerIcon /> */}
-                </div>
+                {icon}
                 <div>{name}</div>
               </div>
             </MenuItem>

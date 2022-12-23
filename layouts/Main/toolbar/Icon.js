@@ -1,5 +1,5 @@
-import * as icons from '@icons';
-import iconData from '@icons/icon-data.json';
+import * as icons from 'components/icons';
+import iconData from 'components/icons/icon-data.json';
 import { useLogo } from 'contexts/LogoProvider';
 
 const Icon = () => {

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import MainLayout from 'layouts/Main';
 import { useLogo } from 'contexts/LogoProvider';
-import * as icons from '@icons';
+import * as icons from 'components/icons';
 
 const Home = () => {
   const [logo] = useLogo();

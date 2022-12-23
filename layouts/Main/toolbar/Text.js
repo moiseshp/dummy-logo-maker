@@ -1,4 +1,5 @@
 import { useLogo } from 'contexts/LogoProvider';
+import ColorPicker from 'components/ColorPicker';
 
 const Text = () => {
   const [logo, updateLogo] = useLogo();
@@ -15,12 +16,14 @@ const Text = () => {
         placeholder="type your text"
       />
       <br />
-      <select defaultValue={logo.color} onChange={(e) => updateLogo({ color: e.target.value })}>
-        <option value="yellow">Yellow</option>
-        <option value="red">Red</option>
-        <option value="black">Black</option>
-        <option value="purple">Purple</option>
-      </select>
+
+      <ColorPicker
+        alpha
+        width={267}
+        height={200}
+        color={logo.color}
+        onChange={(color) => updateLogo({ color: color.hex })}
+      />
 
       <select
         defaultValue={logo.fontFamily}

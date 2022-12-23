@@ -4,9 +4,10 @@ const StyledToolContainer = styled.div`
   background-color: #fff;
   top: 0;
   bottom: 0;
-  left: 80px;
+  left: ${({ theme }) => theme.helpers.getRem(80)};
   position: absolute;
-  width: 300px;
+  width: ${({ theme }) => theme.helpers.getRem(300)};
+  padding: ${({ theme }) => theme.helpers.getSpacing(2)};
 `;
 
 const ToolContainer = ({ children }) => {

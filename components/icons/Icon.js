@@ -6,21 +6,13 @@ const StyledIcon = styled.svg`
     css`
       width: ${theme.helpers.getRem(size)};
       height: ${theme.helpers.getRem(size)};
-      fill: none;
-      stroke-width: 2;
-      stroke: ${color};
+      fill: ${color};
     `}
 `;
 
 const Icon = ({ children, ...rest }) => {
   return (
-    <StyledIcon
-      viewBox="0 0 24 24"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      xmlns="http://www.w3.org/2000/svg"
-      {...rest}
-    >
+    <StyledIcon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...rest}>
       {children}
     </StyledIcon>
   );
