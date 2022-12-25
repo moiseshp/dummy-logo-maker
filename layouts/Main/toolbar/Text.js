@@ -16,10 +16,22 @@ const Text = () => {
         placeholder="type your text"
       />
       <br />
+      <p>FontWeight</p>
+      <hr />
+      <p>FontSize</p>
+      <hr />
+
+      <p>LetterSpacing</p>
+      <hr />
+
+      <p>Color</p>
+      <hr />
+
+      <p>FontFamily</p>
+      <hr />
 
       <ColorPicker
-        alpha
-        width={267}
+        width={252}
         height={200}
         color={logo.color}
         onChange={(color) => updateLogo({ color: color.hex })}

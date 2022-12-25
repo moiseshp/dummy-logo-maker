@@ -7,7 +7,10 @@ const Isotype = () => {
   return (
     <div>
       <div>Isotype</div>
-      <p>Sit amet dolor</p>
+      <p>Search your isotype</p>
+      <p>Selected icon</p>
+      <p>Filter by category</p>
+      <p>Color</p>
       {iconData.map(({ id, name }) => {
         const MyIcon = icons[id];
         return (

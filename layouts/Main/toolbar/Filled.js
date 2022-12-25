@@ -9,8 +9,7 @@ const Filled = () => {
       <div>FIlled</div>
       <p>Sit amet dolor</p>
       <ColorPicker
-        alpha
-        width={267}
+        width={252}
         height={200}
         color={logo.backgroundColor}
         onChange={(color) => updateLogo({ backgroundColor: color.hex })}

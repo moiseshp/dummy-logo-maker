@@ -22,8 +22,8 @@ export const baseTheme = {
     htmlFontSize: '62.5%',
     fontSize: 16,
     regular: 400,
-    bolder: 500,
-    bold: 700,
+    bolder: 700,
+    bold: 800,
     variants: {
       h1: 40,
       h2: 36,
@@ -46,9 +46,9 @@ export const baseTheme = {
   },
   button: {
     size: {
-      small: 24,
-      medium: 32,
-      large: 40,
+      small: 30,
+      medium: 40,
+      large: 50,
     },
   },
   mixins: {

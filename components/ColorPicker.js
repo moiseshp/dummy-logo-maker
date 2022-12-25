@@ -6,7 +6,10 @@ import 'react-color-palette/lib/css/styles.css';
 
 const ColorPicker = ({ width, height, color, alpha, onChange }) => {
   const [colorPicker, setColorPicker] = useColor('hex', color);
-
+  const handleChange = (color) => {
+    setColorPicker(color);
+    onChange(color);
+  };
   return (
     <ColorPickerRoot
       width={width}
@@ -14,8 +17,7 @@ const ColorPicker = ({ width, height, color, alpha, onChange }) => {
       color={colorPicker}
       alpha={alpha}
       hideHSV
-      onChange={setColorPicker}
-      onChangeComplete={onChange}
+      onChange={handleChange}
     />
   );
 };

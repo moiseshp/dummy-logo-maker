@@ -7,7 +7,7 @@ const StyledToolContainer = styled.div`
   left: ${({ theme }) => theme.helpers.getRem(80)};
   position: absolute;
   width: ${({ theme }) => theme.helpers.getRem(300)};
-  padding: ${({ theme }) => theme.helpers.getSpacing(2)};
+  padding: ${({ theme }) => theme.helpers.getSpacing(3)};
 `;
 
 const ToolContainer = ({ children }) => {

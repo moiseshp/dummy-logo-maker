@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const StyledMenuItem = styled.div`
   width: ${({ theme }) => theme.helpers.getRem(80)};
@@ -8,8 +8,18 @@ const StyledMenuItem = styled.div`
   align-items: center;
   text-align: center;
   font-size: ${({ theme }) => theme.typography.variants.caption};
-  color: ${({ theme, isActive }) => (isActive ? theme.pallete.primary : 'currentColor')};
-  font-weight: ${({ theme }) => theme.typography.bolder};
+  cursor: pointer;
+  &:hover {
+    color: ${({ theme }) => theme.pallete.primary};
+  }
+  ${({ theme, isActive }) => {
+    if (isActive) {
+      return css`
+        color: ${theme.pallete.primary};
+        font-weight: ${theme.typography.bolder};
+      `;
+    }
+  }}
 `;
 
 const MenuItem = ({ children, ...rest }) => {
