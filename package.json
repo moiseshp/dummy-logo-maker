@@ -1,5 +1,5 @@
 {
-  "name": "dummy-logo-maker",
+  "name": "@moiseshp/dummy-logo-maker",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -12,8 +12,8 @@
     "check-format": "prettier --check ."
   },
   "dependencies": {
-    "@next/font": "13.0.7",
-    "next": "13.0.7",
+    "@next/font": "13.1.1",
+    "next": "13.1.1",
     "react": "18.2.0",
     "react-color-palette": "^6.2.0",
     "react-dom": "18.2.0",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "eslint": "8.30.0",
-    "eslint-config-next": "13.0.7",
+    "eslint-config-next": "13.1.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-react-important-stuff": "^3.0.0",
     "eslint-plugin-prettier": "^4.2.1",

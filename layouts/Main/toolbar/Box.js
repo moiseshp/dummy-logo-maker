@@ -7,7 +7,8 @@ const Filled = () => {
   return (
     <div>
       <div>FIlled</div>
-      <p>Sit amet dolor</p>
+      <p>Padding / Gap</p>
+      <p>backgroundColor</p>
       <ColorPicker
         width={252}
         height={200}

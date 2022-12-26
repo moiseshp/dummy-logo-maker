@@ -27,7 +27,7 @@ const menuItems = [
   },
   {
     icon: <SquaresFilledIcon />,
-    name: 'Filled',
+    name: 'Box',
     pathname: '/groups/[groupId]/championships/[championshipId]/matches',
   },
   {
