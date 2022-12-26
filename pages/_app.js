@@ -11,55 +11,25 @@ import {
   Tangerine,
   Courier_Prime,
   Ubuntu_Mono,
-  Marhey, // 400, 700
-  Sansita_Swashed, // 400, 700
-  Atma, // 400, 700
-  Tourney, // 400,
+  Marhey,
+  Sansita_Swashed,
+  Atma,
+  Tourney,
 } from '@next/font/google';
 import Head from 'next/head';
 import theme from 'theme';
 
-const openSans = Open_Sans({
-  // weight: ['400', '600', '700'],
-  // style: ['normal', 'italic'],
-  // subsets: ['latin'],
-});
-
-const montserrat = Montserrat({
-  // weight: ['400', '500', '800'],
-  style: ['normal'],
-  // subsets: ['latin'],
-});
-
-const josefinSlab = Josefin_Slab({
-  weight: ['400', '500', '700'],
-  style: ['normal'],
-  // subsets: ['latin'],
-});
-
-const dancingScript = Dancing_Script({
-  weight: ['400', '700'],
-  style: ['normal'],
-  // subsets: ['latin'],
-});
-
-const tangerine = Tangerine({
-  weight: ['400', '700'],
-  style: ['normal'],
-  // subsets: ['latin'],
-});
-
-const courierPrime = Courier_Prime({
-  weight: ['400', '700'],
-  style: ['normal'],
-  // subsets: ['latin'],
-});
-
-const ubuntuMono = Ubuntu_Mono({
-  weight: ['400', '700'],
-  style: ['normal'],
-  // subsets: ['latin'],
-});
+const josefinSlab = Josefin_Slab();
+const montserrat = Montserrat();
+const openSans = Open_Sans();
+const dancingScript = Dancing_Script();
+const tangerine = Tangerine({ weight: ['400', '700'] });
+const courierPrime = Courier_Prime({ weight: ['400', '700'] });
+const ubuntuMono = Ubuntu_Mono({ weight: ['400', '700'] });
+const marhey = Marhey();
+const sansitaSwashed = Sansita_Swashed();
+const atma = Atma({ weight: ['400', '700'] });
+const tourney = Tourney();
 
 const MyApp = ({ Component, pageProps }) => {
   const [isMounted, setIsMounted] = useState(false);
@@ -87,6 +57,33 @@ const MyApp = ({ Component, pageProps }) => {
           }
           .Montserrat {
             font-family: ${montserrat.style.fontFamily};
+          }
+          .Open_Sans {
+            font-family: ${openSans.style.fontFamily};
+          }
+          .Dancing_Script {
+            font-family: ${dancingScript.style.fontFamily};
+          }
+          .Tangerine {
+            font-family: ${tangerine.style.fontFamily};
+          }
+          .Courier_Prime {
+            font-family: ${courierPrime.style.fontFamily};
+          }
+          .Ubuntu_Mono {
+            font-family: ${ubuntuMono.style.fontFamily};
+          }
+          .Marhey {
+            font-family: ${marhey.style.fontFamily};
+          }
+          .Sansita_Swashed {
+            font-family: ${sansitaSwashed.style.fontFamily};
+          }
+          .Atma {
+            font-family: ${atma.style.fontFamily};
+          }
+          .Tourney {
+            font-family: ${tourney.style.fontFamily};
           }
         `}</style>
         {isMounted ? getLayout(<Component {...pageProps} />) : <div>Loading...</div>}

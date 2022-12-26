@@ -4,7 +4,7 @@ import MainContent from 'layouts/Main/components/MainContent';
 import MenuBar from 'layouts/Main/components/MenuBar';
 import MenuItem from 'layouts/Main/components/MenuItem';
 import Sidebar from 'layouts/Main/components/Sidebar';
-import ToolContainer from 'layouts/Main/components/ToolContainer';
+import ToolbarAside from 'layouts/Main/components/ToolbarAside';
 import LogoBoxContainer from 'layouts/Main/components/LogoBoxContainer';
 import LogoBox from 'layouts/Main/components/LogoBox';
 import PencilRulerIcon from 'components/icons/components/PencilRuler';
@@ -61,9 +61,9 @@ const Main = ({ children }) => {
             </MenuItem>
           ))}
         </MenuBar>
-        <ToolContainer>
+        <ToolbarAside>
           <Toolbar />
-        </ToolContainer>
+        </ToolbarAside>
       </Sidebar>
       <MainContent>
         <LogoBoxContainer>

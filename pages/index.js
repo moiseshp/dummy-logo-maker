@@ -19,7 +19,11 @@ const Home = () => {
           <div>
             <div
               className={logo.fontFamily}
-              style={{ color: logo.color, fontSize: `${logo.fontSize}px` }}
+              style={{
+                color: logo.color,
+                fontSize: `${logo.fontSize}px`,
+                letterSpacing: logo.letterSpacing,
+              }}
             >
               {logo.text}
             </div>

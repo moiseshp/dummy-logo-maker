@@ -37,7 +37,7 @@ const StyledBox = styled.div`
     position &&
     css`
       position: ${position};
-      top: ${theme.helpe.getRem(top) || 'auto'};
+      top: ${theme.helpers.getRem(top) || 'auto'};
       right: ${theme.helpers.getRem(right) || 'auto'};
       bottom: ${theme.helpers.getRem(bottom) || 'auto'};
       left: ${theme.helpers.getRem(left) || 'auto'};
@@ -59,7 +59,7 @@ Box.defaultProps = {
   width: 'auto',
   maxWidth: 'auto',
   height: 'auto',
-  display: 'inline',
+  display: 'block',
   justifyContent: 'normal',
   alignItems: 'normal',
   flexGrow: 0,

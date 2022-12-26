@@ -9,7 +9,8 @@ const StyledButton = styled.button`
   text-align: center;
   font-weight: bold;
   vertical-align: middle;
-  border-radius: ${({ theme, isRounded }) => (isRounded ? '100%' : theme.shape.borderRadius)};
+  border-radius: ${({ theme, isRounded, size }) =>
+    isRounded ? theme.button.size[size] : theme.shape.borderRadius};
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
   padding: 0 ${({ theme, size }) => theme.helpers.getRem(size === 'small' ? 15 : 25)};
   height: ${({ theme, size }) => theme.button.size[size]};
