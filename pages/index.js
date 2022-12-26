@@ -17,7 +17,10 @@ const Home = () => {
       <main style={{ backgroundColor: logo.backgroundColor, height: '100%', width: '100%' }}>
         <div>
           <div>
-            <div className={logo.fontFamily} style={{ color: logo.color, fontSize: '5rem' }}>
+            <div
+              className={logo.fontFamily}
+              style={{ color: logo.color, fontSize: `${logo.fontSize}px` }}
+            >
               {logo.text}
             </div>
             <Icon />

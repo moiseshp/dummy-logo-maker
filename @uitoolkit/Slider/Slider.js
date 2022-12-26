@@ -63,7 +63,16 @@ const StyledInput = styled.input`
   right: 0;
 `;
 
-const Slider = ({ min, max, step, value: initValue, disabled, onChange, ...rest }) => {
+const Slider = ({
+  min,
+  max,
+  step,
+  value: initValue,
+  defaultValue,
+  disabled,
+  onChange,
+  ...rest
+}) => {
   const [value, setValue] = useState(initValue);
   const calculateTrackSlide = () => {
     const slides = (100 / (max - min)) * step;
@@ -71,9 +80,8 @@ const Slider = ({ min, max, step, value: initValue, disabled, onChange, ...rest 
   };
 
   const handleChange = (event) => {
-    const { value } = event.target;
-    setValue(value);
-    onChange(value);
+    setValue(event.target?.value);
+    onChange(event);
   };
   return (
     <StyledSlider>
@@ -89,6 +97,7 @@ const Slider = ({ min, max, step, value: initValue, disabled, onChange, ...rest 
         max={max}
         step={step}
         value={value}
+        defaultValue={defaultValue}
         onChange={handleChange}
         disabled={disabled}
         {...rest}

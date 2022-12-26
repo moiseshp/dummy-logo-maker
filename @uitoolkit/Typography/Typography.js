@@ -31,7 +31,7 @@ Typography.defaultProps = {
   fontWeight: 'inherit',
   textTransform: 'inherit',
   mt: 0,
-  mb: 0,
+  mb: 1,
 };
 
 export default Typography;

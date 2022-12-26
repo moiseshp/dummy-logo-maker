@@ -23,10 +23,19 @@ const StyleFieldset = styled.fieldset`
   border-radius: ${({ theme }) => theme.shape.borderRadius};
   border-width: ${({ theme }) => theme.helpers.getRem(1)};
   border-style: solid;
-  overflow: hidden;
   min-width: 0%;
   border-color: ${({ theme, isFocus }) => theme.pallete[isFocus ? 'primary' : 'textSecondary']};
   margin: 0;
+  legend {
+    padding: 0 ${({ theme }) => theme.helpers.getRem(5)};
+    background-color: ${({ isActive }) => (isActive ? 'white' : 'transparent')};
+    color: transparent;
+    font-size: ${({ theme }) => theme.typography.variants.caption};
+    margin: 0;
+    position: absolute;
+    top: -${({ theme }) => theme.helpers.getRem(9)};
+    left: ${({ theme }) => theme.helpers.getRem(9)};
+  }
 `;
 
 const StyledInput = styled.input`
@@ -40,7 +49,6 @@ const StyledInput = styled.input`
   animation-duration: 10ms;
   padding-left: ${({ theme, startIcon }) => theme.helpers.getRem(startIcon ? 0 : 15)};
   padding-right: ${({ theme, endIcon }) => theme.helpers.getRem(endIcon ? 0 : 15)};
-  line-height: ${({ theme }) => theme.helpers.getRem(HEIGHT)};
   font-size: ${({ theme }) => theme.typography.variants.body1};
   color: inherit;
 `;
@@ -63,14 +71,14 @@ const StyledLabel = styled.label`
   padding-left: ${({ theme, startIcon }) => theme.helpers.getRem(startIcon ? 40 : 5)};
   padding-right: ${({ theme, endIcon }) => theme.helpers.getRem(endIcon ? 40 : 5)};
   color: ${({ theme, isFocus }) => theme.pallete[isFocus ? 'primary' : 'textSecondary']};
-  transform: translate(10px, 15px) scale(1);
-  ${({ isActive }) =>
+  transform: ${({ theme }) =>
+    css`translate(${theme.helpers.getRem(10)},  ${theme.helpers.getRem(14.2)}) scale(1)`};
+  ${({ theme, isActive }) =>
     isActive &&
     css`
-      transform: translate(10px, -6px) scale(1);
+      transform: translate(${theme.helpers.getRem(10)}, -${theme.helpers.getRem(8)}) scale(1);
       pointer-events: auto;
       user-select: none;
-      background-color: ${({ theme }) => theme.pallete.body};
       font-size: ${({ theme }) => theme.typography.variants.caption};
       padding: 0 ${({ theme }) => theme.helpers.getRem(5)};
     `}
@@ -84,7 +92,17 @@ const StyledIcon = styled.div`
   height: ${({ theme }) => theme.helpers.getRem(HEIGHT)};
 `;
 
-const TextField = ({ label, value: initValue, fullWidth, startIcon, endIcon, onChange }) => {
+const TextField = ({
+  label,
+  placeholder,
+  value: initValue,
+  defaultValue,
+  fullWidth,
+  startIcon,
+  endIcon,
+  onChange,
+  ...rest
+}) => {
   const [value, setValue] = useState(initValue);
   const [isFocus, setIsFocus] = useState(false);
   const handleFocus = (e) => {
@@ -95,9 +113,8 @@ const TextField = ({ label, value: initValue, fullWidth, startIcon, endIcon, onC
     setIsFocus(false);
   };
   const handleChange = (event) => {
-    const { value } = event?.target;
-    setValue(value);
-    onChange(value);
+    setValue(event.target?.value);
+    onChange(event);
   };
   return (
     <StyledTextField fullWidth={fullWidth}>
@@ -109,19 +126,24 @@ const TextField = ({ label, value: initValue, fullWidth, startIcon, endIcon, onC
       >
         {label}
       </StyledLabel>
-      <Box display="flex" alignItems="center" style={{ flex: '2 1 auto' }}>
+      <Box display="flex" alignItems="center">
         {startIcon && <StyledIcon>{startIcon}</StyledIcon>}
         <StyledInput
-          defaultValue={value}
+          value={value}
+          defaultValue={defaultValue}
           onFocus={handleFocus}
           onBlur={handleFocus}
           onChange={handleChange}
           startIcon={Boolean(startIcon)}
           endIcon={Boolean(endIcon)}
+          placeholder={placeholder}
+          {...rest}
         />
         {endIcon && <StyledIcon>{endIcon}</StyledIcon>}
       </Box>
-      <StyleFieldset isFocus={isFocus} />
+      <StyleFieldset isActive={value || isFocus} isFocus={isFocus}>
+        <legend>{label}</legend>
+      </StyleFieldset>
     </StyledTextField>
   );
 };
