@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import * as icons from 'components/icons';
 import ColorPicker from 'components/ColorPicker';
 import TextField from '@uitoolkit/TextField';
@@ -13,6 +14,17 @@ import { useLogo } from 'contexts/LogoProvider';
 
 const Isotype = () => {
   const [logo, updateLogo] = useLogo();
+  const [searchText, setSearchText] = useState('');
+  const [iconsFiltered, setIconsFiltered] = useState(iconData);
+  const handleSearch = (event) => {
+    const { value } = event?.target;
+    setSearchText(value);
+    const icons = iconData.filter(({ name, tags }) => {
+      tags.push(name);
+      return tags.join().toLowerCase().includes(value.toLowerCase());
+    });
+    setIconsFiltered(icons);
+  };
   return (
     <Tabs
       fixesTabs
@@ -28,9 +40,15 @@ const Isotype = () => {
           <Typography variant="body2" color="textSecondary">
             Search icon
           </Typography>
-          <TextField fullWidth placeholder="Eg. Natural o cow" />
+          <TextField
+            fullWidth
+            placeholder="Eg. Natural o cow"
+            value={searchText}
+            onChange={handleSearch}
+          />
+
           <Box mt={2}>
-            {['category 1', 'category 2', 'category 3', 'category 4', 'category 5'].map((item) => (
+            {['cate 1', 'Tegory 2', 'Category 3', 'categy 4', 'category 5'].map((item) => (
               <Button
                 key={item}
                 size="small"
@@ -51,7 +69,7 @@ const Isotype = () => {
               gridGap: '1rem',
             }}
           >
-            {iconData.map(({ id, name }) => {
+            {iconsFiltered.map(({ id, name }) => {
               const Icon = icons[id];
               return (
                 <Box key={id} textAlign="center" onClick={() => updateLogo({ iconId: id })}>
