@@ -6,7 +6,7 @@ const StyledIcon = styled.svg`
     css`
       width: ${theme.helpers.getRem(size)};
       height: ${theme.helpers.getRem(size)};
-      fill: ${color};
+      fill: ${theme.helpers.getColor(color)};
     `}
 `;
 

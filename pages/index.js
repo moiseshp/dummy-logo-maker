@@ -23,11 +23,12 @@ const Home = () => {
                 color: logo.color,
                 fontSize: `${logo.fontSize}px`,
                 letterSpacing: logo.letterSpacing,
+                fontWeight: logo.fontWeight,
               }}
             >
               {logo.text}
             </div>
-            <Icon />
+            <Icon color={logo.iconColor} size={logo.iconSize} />
             <pre>
               <code>{JSON.stringify(logo, null, 6)}</code>
             </pre>
