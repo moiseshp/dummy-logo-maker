@@ -7,12 +7,12 @@ const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-weight: bold;
+  font-weight: ${({ theme }) => theme.typography.bolder};
   vertical-align: middle;
   border-radius: ${({ theme, isRounded, size }) =>
     isRounded ? theme.button.size[size] : theme.shape.borderRadius};
   width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
-  padding: 0 ${({ theme, size }) => theme.helpers.getRem(size === 'small' ? 15 : 25)};
+  padding: 0 ${({ theme, size }) => theme.helpers.getRem(size === 'small' ? 10 : 20)};
   height: ${({ theme, size }) => theme.button.size[size]};
   line-height: ${({ theme, size }) => theme.button.size[size]};
   font-size: ${({ theme, size }) =>
@@ -20,10 +20,10 @@ const StyledButton = styled.button`
   ${({ theme, color, variant }) => css`
     ${variant === 'contained' &&
     css`
-      background-color: ${theme.helpers.getColor(color) || color || theme.pallete.textPrimary};
-      color: ${color === 'light-color' ? theme.pallete.textPrimary : 'white'};
+      background-color: ${theme.helpers.getColor(color)};
+      color: white;
       & svg {
-        fill: ${color === 'light-color' ? theme.pallete.textPrimary : 'white'};
+        fill: white;
       }
     `}
     ${variant !== 'text' &&
@@ -33,9 +33,9 @@ const StyledButton = styled.button`
     `}
     ${variant !== 'contained' &&
     css`
-      color: ${theme.helpers.getColor(color) || color || theme.pallete.textPrimary};
+      color: ${theme.helpers.getColor(color)};
       & svg {
-        fill: ${theme.helpers.getColor(color) || color || theme.pallete.textPrimary};
+        fill: ${theme.helpers.getColor(color)};
       }
     `}
   `};

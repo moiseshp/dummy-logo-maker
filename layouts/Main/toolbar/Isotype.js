@@ -15,14 +15,14 @@ import { useLogo } from 'contexts/LogoProvider';
 const Isotype = () => {
   const [logo, updateLogo] = useLogo();
   const [searchText, setSearchText] = useState('');
-  const [iconsFiltered, setIconsFiltered] = useState(iconData);
+  const [iconsFiltered, setIconsFiltered] = useState(iconData.icons);
   const handleSearch = (event) => {
     const { value } = event?.target;
     setSearchText(value);
-    const icons = iconData.filter(({ name, tags }) => {
-      tags.push(name);
-      return tags.join().toLowerCase().includes(value.toLowerCase());
-    });
+    handleFiltered(value);
+  };
+  const handleFiltered = (value) => {
+    const icons = iconData.icons.filter(({ tags }) => tags.join().includes(value.toLowerCase()));
     setIconsFiltered(icons);
   };
   return (
@@ -48,12 +48,13 @@ const Isotype = () => {
           />
 
           <Box mt={2}>
-            {['cate 1', 'Tegory 2', 'Category 3', 'categy 4', 'category 5'].map((item) => (
+            {iconData.tags.map((item) => (
               <Button
                 key={item}
                 size="small"
                 variant="outlined"
-                style={{ marginRight: 10, marginBottom: 10 }}
+                style={{ marginRight: 5, marginBottom: 5 }}
+                onClick={() => handleFiltered(item)}
               >
                 {item}
               </Button>
@@ -74,10 +75,7 @@ const Isotype = () => {
               return (
                 <Box key={id} textAlign="center" onClick={() => updateLogo({ iconId: id })}>
                   <Card hasBorder bgColor="transparent">
-                    <Icon color="textSecondary" />
-                    <Typography variant="caption" color="textSecondary" mb={0}>
-                      {name}
-                    </Typography>
+                    <Icon color="textSecondary" size={40} />
                   </Card>
                 </Box>
               );

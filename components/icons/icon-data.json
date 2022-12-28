@@ -1,11 +1,14 @@
-[
-  { "id": "Bat", "name": "Bat", "tags": ["Nature", "Animal", "Holiday"] },
-  { "id": "Bird", "name": "Bird", "tags": ["Nature", "Animal"] },
-  { "id": "Bug", "name": "Bug", "tags": ["Nature", "Animal"] },
-  { "id": "Butterfly", "name": "Butterfly", "tags": ["Nature", "Animal"] },
-  { "id": "Cat", "name": "Cat", "tags": ["Nature", "Animal", "Holiday"] },
-  { "id": "Cow", "name": "Cow", "tags": ["Nature", "Animal", "Agriculture"] },
-  { "id": "Dog", "name": "Dog", "tags": ["Animal"] },
-  { "id": "Dolphin", "name": "Dolphin", "tags": ["Animal"] },
-  { "id": "Spider", "name": "Spider", "tags": ["Animal", "Holiday", "Nature"] }
-]
+{
+  "tags": ["nature", "animal", "holiday", "agriculture"],
+  "icons": [
+    { "id": "Bat", "name": "Bat", "tags": ["bat", "nature", "animal", "holiday"] },
+    { "id": "Bird", "name": "Bird", "tags": ["bird", "nature", "animal"] },
+    { "id": "Bug", "name": "Bug", "tags": ["bug", "nature", "animal"] },
+    { "id": "Butterfly", "name": "Butterfly", "tags": ["butterfly", "nature", "animal"] },
+    { "id": "Cat", "name": "Cat", "tags": ["cat", "nature", "animal", "holiday"] },
+    { "id": "Cow", "name": "Cow", "tags": ["cow", "nature", "animal", "agriculture"] },
+    { "id": "Dog", "name": "Dog", "tags": ["dog", "animal"] },
+    { "id": "Dolphin", "name": "Dolphin", "tags": ["dolphin", "animal"] },
+    { "id": "Spider", "name": "Spider", "tags": ["spider", "animal", "holiday", "nature"] }
+  ]
+}

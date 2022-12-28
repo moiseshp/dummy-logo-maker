@@ -16,7 +16,7 @@ const StyledSlider = styled.div`
 const StyledTrack = styled.div`
   height: 100%;
   width: 100%;
-  background-color: ${({ theme }) => theme.pallete.grayLight};
+  background-color: ${({ theme }) => theme.pallete.lightGray};
   border-radius: ${({ theme }) => theme.shape.borderRadius};
   position: relative;
   overflow: hidden;
@@ -24,7 +24,7 @@ const StyledTrack = styled.div`
 
 const StlyedTrackSlider = styled.div`
   height: 100%;
-  background-color: ${({ theme, disabled }) => theme.pallete[disabled ? 'grayLight' : 'primary']};
+  background-color: ${({ theme, disabled }) => theme.pallete[disabled ? 'lightGray' : 'primary']};
   width: ${({ slide }) => slide}%;
 `;
 
@@ -40,7 +40,7 @@ const StyledControlSlider = styled.span`
   display: block;
   width: ${({ theme }) => theme.helpers.getRem(HEIGHT)};
   height: ${({ theme }) => theme.helpers.getRem(HEIGHT)};
-  background-color: ${({ theme, disabled }) => theme.pallete[disabled ? 'grayLight' : 'primary']};
+  background-color: ${({ theme, disabled }) => theme.pallete[disabled ? 'lightGray' : 'primary']};
   border-radius: 100%;
   position: absolute;
   left: ${({ slide }) => slide}%;

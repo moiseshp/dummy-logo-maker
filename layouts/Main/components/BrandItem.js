@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import MenuItem from './MenuItem';
 
 const StyledBrandItem = styled(MenuItem)`
-  border-bottom: 1px solid #eee;
+  border-bottom: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray}`};
 `;
 
 const BrandItem = ({ children }) => {
-  return <StyledBrandItem>{children}</StyledBrandItem>;
+  return <StyledBrandItem color="primary">{children}</StyledBrandItem>;
 };
 
 export default BrandItem;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const StyledMenuBar = styled.nav`
-  background-color: #fff;
+  background-color: white;
   top: 0;
   bottom: 0;
   left: 0;
   position: absolute;
-  width: 80px;
-  border-right: 1px solid #eee;
+  width: ${({ theme }) => theme.helpers.getRem(80)};
+  border-right: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray}`};
 `;
 
 const MenuBar = ({ children }) => {

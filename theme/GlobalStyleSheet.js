@@ -27,11 +27,11 @@ export const GlobalStyleSheet = createGlobalStyle`
   }
 
   a {
-    color: ${({ theme }) => theme.pallete.secondary}
+    color: ${({ theme }) => theme.pallete.primary}
   }
 
   strong {
-    font-weight: ${({ theme }) => theme.typography.fontWeightBolder};
+    font-weight: ${({ theme }) => theme.typography.bolder};
   }
   
   button {

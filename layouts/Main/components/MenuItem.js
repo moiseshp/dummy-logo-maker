@@ -8,15 +8,26 @@ const StyledMenuItem = styled.div`
   align-items: center;
   text-align: center;
   font-size: ${({ theme }) => theme.typography.variants.caption};
+  color: ${({ theme, color }) => theme.helpers.getColor(color)};
   cursor: pointer;
+  transition: 0.2s;
   &:hover {
-    color: ${({ theme }) => theme.pallete.primary};
+    color: ${({ theme }) => theme.pallete.textPrimary};
   }
   ${({ theme, isActive }) => {
     if (isActive) {
       return css`
         color: ${theme.pallete.primary};
         font-weight: ${theme.typography.bolder};
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          background-color: ${theme.pallete.primary};
+          width: ${theme.helpers.getRem(2)};
+          height: 24%;
+          right: 0;
+        }
       `;
     }
   }}
@@ -28,6 +39,10 @@ const MenuItem = ({ children, ...rest }) => {
       {children}
     </StyledMenuItem>
   );
+};
+
+MenuItem.defaultProps = {
+  color: 'inherit',
 };
 
 export default MenuItem;

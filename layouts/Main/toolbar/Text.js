@@ -14,20 +14,17 @@ const Text = () => {
   const [logo, updateLogo] = useLogo();
   return (
     <Tabs
+      py={3}
+      px={0}
       fixesTabs
       items={[
-        { value: 'font', text: 'Font' },
-        { value: 'color', text: 'Color' },
+        { value: 'font', text: 'Text' },
         { value: 'family', text: 'Family' },
       ]}
-      py={3}
-      px={1}
     >
-      <Stack spacing={4} value="font">
+      <Stack spacing={2.5} value="font">
         <Box>
-          <Typography variant="body2" color="textSecondary">
-            Type your logo name
-          </Typography>
+          <Typography variant="caption">Type your logo name</Typography>
           <TextField
             fullWidth
             placeholder="Eg. DummyLogo"
@@ -40,9 +37,7 @@ const Text = () => {
           />
         </Box>
         <Box>
-          <Typography variant="body2" color="textSecondary">
-            Font weight
-          </Typography>
+          <Typography variant="caption">Font weight</Typography>
           <Stack direction="row" spacing={1}>
             {['normal', 'bold'].map((item) => {
               const isSelected = Boolean(logo.fontWeight === item);
@@ -65,9 +60,7 @@ const Text = () => {
           </Stack>
         </Box>
         <Box>
-          <Typography variant="body2" color="textSecondary">
-            Font size
-          </Typography>
+          <Typography variant="caption">Font size</Typography>
           <Slider
             value={logo.fontSize}
             min={20}
@@ -80,9 +73,7 @@ const Text = () => {
           />
         </Box>
         <Box>
-          <Typography variant="body2" color="textSecondary">
-            Letter spacing
-          </Typography>
+          <Typography variant="caption">Letter spacing</Typography>
           <Slider
             value={logo.letterSpacing}
             min={1}
@@ -94,14 +85,15 @@ const Text = () => {
             }
           />
         </Box>
-      </Stack>
-      <Stack spacing={4} value="color">
-        <ColorPicker
-          width={236}
-          height={160}
-          color={logo.color}
-          onChange={(color) => updateLogo({ color: color.hex })}
-        />
+        <Box>
+          <Typography variant="caption">Color</Typography>
+          <ColorPicker
+            width={236}
+            height={140}
+            color={logo.color}
+            onChange={(color) => updateLogo({ color: color.hex })}
+          />
+        </Box>
       </Stack>
       <Stack spacing={1} value="family">
         {googleFonts.map((item) => (
@@ -116,7 +108,7 @@ const Text = () => {
               });
             }}
           >
-            <Typography mb={0} className={item} variant="h6">
+            <Typography mb={0} className={item} variant="h6" fontWeight="bolder">
               {item.replace('_', ' ')}
             </Typography>
           </Card>

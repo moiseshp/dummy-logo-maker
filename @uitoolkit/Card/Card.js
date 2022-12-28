@@ -8,12 +8,12 @@ const StyledCard = styled.div`
   ${({ theme, hasBorder }) =>
     hasBorder &&
     css`
-      border: ${theme.helpers.getRem(1)} solid ${theme.pallete.grayLight};
+      border: ${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray};
     `}
   ${({ theme, hasShadow }) =>
     hasShadow &&
     css`
-      box-shadow: 0 0 ${theme.helpers.getRem(20)} ${theme.pallete.grayLight};
+      box-shadow: 0 0 ${theme.helpers.getRem(20)} ${theme.pallete.lightGray};
     `}
 `;
 

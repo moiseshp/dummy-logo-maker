@@ -4,14 +4,14 @@ import styled, { css } from 'styled-components';
 
 const StyledTabs = styled(Box)`
   display: flex;
-  border-bottom: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.grayLight};`};
+  border-bottom: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray};`};
   justify-content: ${({ fixesTabs }) => (fixesTabs ? 'space-between' : 'normal')};
 `;
 
 const StyledTab = styled(Box)`
   font-size: ${({ theme }) => theme.typography.variants.body2};
   color: ${({ theme, isActive }) => (isActive ? theme.pallete.primary : 'inherit')};
-  padding: ${({ theme }) => theme.helpers.getSpacing(2)};
+  padding: ${({ theme }) => theme.helpers.getSpacing(3)};
   height: ${({ theme }) => theme.helpers.getRem(40)};
   display: flex;
   align-items: center;
@@ -22,6 +22,7 @@ const StyledTab = styled(Box)`
   ${({ theme, isActive }) =>
     isActive &&
     css`
+      font-weight: ${theme.typography.bolder};
       &:before {
         content: '';
         position: absolute;

@@ -15,33 +15,39 @@ const StyledBox = styled.div`
   align-items: ${({ alignItems }) => alignItems};
   flex-grow: ${({ flexGrow }) => flexGrow};
   z-index: ${({ zIndex }) => zIndex};
-  padding-top: ${({ theme, pt }) => theme.helpers.getSpacing(pt)};
-  padding-right: ${({ theme, pr }) => theme.helpers.getSpacing(pr)};
-  padding-bottom: ${({ theme, pb }) => theme.helpers.getSpacing(pb)};
-  padding-left: ${({ theme, pl }) => theme.helpers.getSpacing(pl)};
   ${({ theme, p }) =>
-    p &&
-    css`
-      padding: ${theme.helpers.getSpacing(p)} !important;
-    `}
-  margin-top: ${({ theme, mt }) => theme.helpers.getSpacing(mt)};
-  margin-right: ${({ theme, mr }) => theme.helpers.getSpacing(mr)};
-  margin-bottom: ${({ theme, mb }) => theme.helpers.getSpacing(mb)};
-  margin-left: ${({ theme, ml }) => theme.helpers.getSpacing(ml)};
+    p
+      ? css`
+          padding: ${theme.helpers.getSpacing(p)} !important;
+        `
+      : css`
+          padding-top: ${({ theme, pt }) => theme.helpers.getSpacing(pt)};
+          padding-right: ${({ theme, pr }) => theme.helpers.getSpacing(pr)};
+          padding-bottom: ${({ theme, pb }) => theme.helpers.getSpacing(pb)};
+          padding-left: ${({ theme, pl }) => theme.helpers.getSpacing(pl)};
+        `}
   ${({ theme, m }) =>
-    m &&
-    css`
-      margin: ${theme.helpers.getSpacing(m)} !important;
-    `}
-  ${({ theme, position, top, right, bottom, left }) =>
-    position &&
-    css`
-      position: ${position};
-      top: ${theme.helpers.getRem(top) || 'auto'};
-      right: ${theme.helpers.getRem(right) || 'auto'};
-      bottom: ${theme.helpers.getRem(bottom) || 'auto'};
-      left: ${theme.helpers.getRem(left) || 'auto'};
-    `};
+    m
+      ? css`
+          margin: ${theme.helpers.getSpacing(m)} !important;
+        `
+      : css`
+          margin-top: ${({ theme, mt }) => theme.helpers.getSpacing(mt)};
+          margin-right: ${({ theme, mr }) => theme.helpers.getSpacing(mr)};
+          margin-bottom: ${({ theme, mb }) => theme.helpers.getSpacing(mb)};
+          margin-left: ${({ theme, ml }) => theme.helpers.getSpacing(ml)};
+        `}
+  ${({ theme, position, top, right, bottom, left }) => {
+    if (position) {
+      return css`
+        position: ${position};
+        top: ${theme.helpers.getRem(top) || 'auto'};
+        right: ${theme.helpers.getRem(right) || 'auto'};
+        bottom: ${theme.helpers.getRem(bottom) || 'auto'};
+        left: ${theme.helpers.getRem(left) || 'auto'};
+      `;
+    }
+  }}
 `;
 
 const Box = forwardRef(({ id, children, component, ...rest }, ref) => (
@@ -53,7 +59,7 @@ const Box = forwardRef(({ id, children, component, ...rest }, ref) => (
 Box.defaultProps = {
   component: 'div',
   backgroundColor: 'transparente',
-  color: 'canvastext',
+  color: 'inherit',
   textAlign: 'start',
   borderRadius: 0,
   width: 'auto',

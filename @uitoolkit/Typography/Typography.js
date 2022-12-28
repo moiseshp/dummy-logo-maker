@@ -1,11 +1,12 @@
 import styled, { css } from 'styled-components';
 
-const StyledTypography = styled.span`
+const StyledTypography = styled.p`
   font-size: ${({ theme, variant }) => theme.typography.variants[variant]};
   color: ${({ theme, color }) => theme.helpers.getColor(color)};
-  text-align: ${({ align }) => align};
+  text-align: ${({ textAlign }) => textAlign};
   font-weight: ${({ theme, fontWeight }) => theme.typography[fontWeight]};
   text-transform: ${({ textTransform }) => textTransform};
+  margin: 0;
   margin-top: ${({ theme, mt }) => theme.helpers.getSpacing(mt)};
   margin-bottom: ${({ theme, mb }) => theme.helpers.getSpacing(mb)};
   ${({ isTruncate }) =>
@@ -27,7 +28,7 @@ Typography.defaultProps = {
   variant: 'body1',
   component: 'p',
   color: 'inherit',
-  align: 'inherit',
+  textAlign: 'inherit',
   fontWeight: 'inherit',
   textTransform: 'inherit',
   mt: 0,

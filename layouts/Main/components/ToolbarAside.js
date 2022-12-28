@@ -7,7 +7,7 @@ const StyledToolbarAside = styled.div`
   left: ${({ theme }) => theme.helpers.getRem(80)};
   position: absolute;
   width: ${({ theme }) => theme.helpers.getRem(300)};
-  padding: ${({ theme }) => theme.helpers.getSpacing(3)};
+  padding: 0 ${({ theme }) => theme.helpers.getSpacing(3)};
   overflow-y: auto;
   overflow-x: hidden;
 `;
