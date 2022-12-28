@@ -58,7 +58,7 @@ const Box = forwardRef(({ id, children, component, ...rest }, ref) => (
 
 Box.defaultProps = {
   component: 'div',
-  backgroundColor: 'transparente',
+  bgColor: 'transparent',
   color: 'inherit',
   textAlign: 'start',
   borderRadius: 0,

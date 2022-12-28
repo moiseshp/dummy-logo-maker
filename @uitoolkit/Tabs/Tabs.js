@@ -18,6 +18,7 @@ const StyledTab = styled(Box)`
   justify-content: center;
   position: relative;
   cursor: pointer;
+  background-color: white;
   flex: ${({ fixesTabs }) => (fixesTabs ? 'auto' : 'inherit')};
   ${({ theme, isActive }) =>
     isActive &&
@@ -40,8 +41,8 @@ const Tabs = ({ children, items, isActive, px, py, p, fixesTabs, ...rest }) => {
   const tabPanel = React.Children.toArray(children).find(({ props }) => props.value === activeTab);
 
   return (
-    <Box {...rest}>
-      <StyledTabs fixesTabs={fixesTabs}>
+    <>
+      <StyledTabs fixesTabs={fixesTabs} {...rest}>
         {items.map(({ value, text }) => (
           <StyledTab
             isActive={activeTab === value}
@@ -56,7 +57,7 @@ const Tabs = ({ children, items, isActive, px, py, p, fixesTabs, ...rest }) => {
       <Box pl={px} pr={px} pt={py} pb={py} p={p}>
         {tabPanel}
       </Box>
-    </Box>
+    </>
   );
 };
 
@@ -66,6 +67,7 @@ Tabs.defaultProps = {
   px: 0,
   py: 0,
   fixesTabs: false,
+  isSticky: false,
 };
 
 export default Tabs;

@@ -15,7 +15,6 @@ const Text = () => {
   return (
     <Tabs
       py={3}
-      px={0}
       fixesTabs
       items={[
         { value: 'font', text: 'Text' },

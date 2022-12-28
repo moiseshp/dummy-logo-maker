@@ -13,7 +13,7 @@ const StyledIcon = styled.svg`
       height: ${theme.helpers.getRem(size)};
       fill: none;
       stroke-width: 2;
-      stroke: ${color};
+      stroke: ${theme.helpers.getColor(color)};
     `}
 `;
 

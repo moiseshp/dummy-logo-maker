@@ -7,9 +7,10 @@ import Typography from '@uitoolkit/Typography';
 import Stack from '@uitoolkit/Stack';
 import Box from '@uitoolkit/Box';
 import Tabs from '@uitoolkit/Tabs';
-import Button from '@uitoolkit/Button';
 import Card from '@uitoolkit/Card';
 import iconData from 'components/icons/icon-data.json';
+import SearchIcon from '@icons/components/Search';
+import CloseIcon from '@icons/components/Close';
 import { useLogo } from 'contexts/LogoProvider';
 
 const Isotype = () => {
@@ -21,6 +22,11 @@ const Isotype = () => {
     setSearchText(value);
     handleFiltered(value);
   };
+  const handleClear = () => {
+    console.info('clear');
+    setSearchText('hi');
+    setIconsFiltered(iconData.icons);
+  };
   const handleFiltered = (value) => {
     const icons = iconData.icons.filter(({ tags }) => tags.join().includes(value.toLowerCase()));
     setIconsFiltered(icons);
@@ -28,59 +34,54 @@ const Isotype = () => {
   return (
     <Tabs
       fixesTabs
+      position="sticky"
+      top={0}
+      py={3}
       items={[
         { value: 'icons', text: 'Icons' },
         { value: 'color', text: 'Size & Color' },
       ]}
-      py={3}
-      px={1}
     >
-      <Stack spacing={4} value="icons">
-        <Box>
-          <Typography variant="body2" color="textSecondary">
-            Search icon
-          </Typography>
+      <Stack spacing={2.5} value="icons">
+        <Box bgColor="white" position="sticky" top={73}>
           <TextField
             fullWidth
-            placeholder="Eg. Natural o cow"
+            placeholder="Search icon"
             value={searchText}
             onChange={handleSearch}
+            endIcon={
+              searchText ? (
+                <CloseIcon color="disabled" onClick={handleClear} />
+              ) : (
+                <SearchIcon color="disabled" />
+              )
+            }
           />
-
-          <Box mt={2}>
-            {iconData.tags.map((item) => (
-              <Button
-                key={item}
-                size="small"
-                variant="outlined"
-                style={{ marginRight: 5, marginBottom: 5 }}
-                onClick={() => handleFiltered(item)}
-              >
-                {item}
-              </Button>
-            ))}
-          </Box>
         </Box>
-        <Box>
-          <Box
-            display="grid"
-            style={{
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gridAutoRows: 'auto',
-              gridGap: '1rem',
-            }}
-          >
-            {iconsFiltered.map(({ id, name }) => {
-              const Icon = icons[id];
-              return (
-                <Box key={id} textAlign="center" onClick={() => updateLogo({ iconId: id })}>
-                  <Card hasBorder bgColor="transparent">
-                    <Icon color="textSecondary" size={40} />
-                  </Card>
-                </Box>
-              );
-            })}
-          </Box>
+        <Box
+          display="grid"
+          style={{
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            // gridAutoRows: 'auto',
+            gridGap: '1rem',
+          }}
+        >
+          {iconsFiltered.map(({ id }) => {
+            const Icon = icons[id];
+            return (
+              <Card
+                key={id}
+                p={1.5}
+                hasBorder
+                display="flex"
+                justifyContent="center"
+                bgColor="transparent"
+                onClick={() => updateLogo({ iconId: id })}
+              >
+                <Icon color="textPrimary" size={40} />
+              </Card>
+            );
+          })}
         </Box>
       </Stack>
       <Stack spacing={4} value="color">
@@ -109,23 +110,6 @@ const Isotype = () => {
         </Box>
       </Stack>
     </Tabs>
-    //   <div>Isotype</div>
-    //   <p>Search your isotype</p>
-    //   <p>Selected icon</p>
-    //   <p>Filter by category</p>
-    //   <p>Color</p>
-    //   {iconData.map(({ id, name }) => {
-    //     const MyIcon = icons[id];
-    //     return (
-    //       <div key={id}>
-    //         <p>{name}</p>
-    //         <button onClick={() => updateLogo({ iconId: id })}>
-    //           <MyIcon />
-    //         </button>
-    //       </div>
-    //     );
-    //   })}
-    // </div>
   );
 };
 

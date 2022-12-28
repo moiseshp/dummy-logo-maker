@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
+import Box from '@uitoolkit/Box';
 
-const StyledCard = styled.div`
+const StyledCard = styled(Box)`
   border-radius: ${({ theme }) => theme.shape.borderRadius};
-  background-color: ${({ theme, bgColor }) => theme.helpers.getColor(bgColor)};
+  /* background-color: ${({ theme, bgColor }) => theme.helpers.getColor(bgColor)}; */
   color: ${({ isDark }) => (isDark ? 'white' : 'currentColor')};
   padding: ${({ theme, p }) => theme.helpers.getSpacing(p)};
   ${({ theme, hasBorder }) =>
@@ -17,17 +18,12 @@ const StyledCard = styled.div`
     `}
 `;
 
-const Card = ({ children, component, ...rest }) => {
-  return (
-    <StyledCard as={component} {...rest}>
-      {children}
-    </StyledCard>
-  );
+const Card = ({ children, ...rest }) => {
+  return <StyledCard {...rest}>{children}</StyledCard>;
 };
 
 Card.defaultProps = {
-  component: 'div',
-  bgColor: 'body',
+  bgColor: 'transparent',
   isDark: false,
   hasShadow: false,
   hasBorder: false,

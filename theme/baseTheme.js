@@ -5,7 +5,7 @@ export const baseTheme = {
   },
   pallete: {
     primary: '#212529',
-    secondary: '#212529',
+    secondary: '#0033FF',
     accent: '#37003C',
     error: 'red',
     info: '#5D27DB',

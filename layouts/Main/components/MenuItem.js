@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const StyledMenuItem = styled.div`
+  cursor: pointer;
   width: ${({ theme }) => theme.helpers.getRem(80)};
   height: ${({ theme }) => theme.helpers.getRem(80)};
   display: flex;
@@ -8,29 +9,11 @@ const StyledMenuItem = styled.div`
   align-items: center;
   text-align: center;
   font-size: ${({ theme }) => theme.typography.variants.caption};
-  color: ${({ theme, color }) => theme.helpers.getColor(color)};
-  cursor: pointer;
-  transition: 0.2s;
+  color: ${({ theme, color, isActive }) => theme.helpers.getColor(isActive ? 'secondary' : color)};
+  font-weight: ${({ theme, isActive }) => theme.typography[isActive ? 'bolder' : 'regular']};
   &:hover {
-    color: ${({ theme }) => theme.pallete.textPrimary};
+    color: ${({ theme }) => theme.pallete.secondary};
   }
-  ${({ theme, isActive }) => {
-    if (isActive) {
-      return css`
-        color: ${theme.pallete.primary};
-        font-weight: ${theme.typography.bolder};
-        position: relative;
-        &:after {
-          content: '';
-          position: absolute;
-          background-color: ${theme.pallete.primary};
-          width: ${theme.helpers.getRem(2)};
-          height: 24%;
-          right: 0;
-        }
-      `;
-    }
-  }}
 `;
 
 const MenuItem = ({ children, ...rest }) => {
@@ -43,6 +26,7 @@ const MenuItem = ({ children, ...rest }) => {
 
 MenuItem.defaultProps = {
   color: 'inherit',
+  isActive: false,
 };
 
 export default MenuItem;
