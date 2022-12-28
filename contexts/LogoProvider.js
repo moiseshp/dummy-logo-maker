@@ -16,6 +16,7 @@ const initLogo = {
   iconSize: 50,
   layout: 'logo',
   text: 'DummyLogo',
+  boxMargins: 0,
 };
 
 const LogoProvider = ({ children }) => {

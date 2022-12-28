@@ -3,7 +3,6 @@ import Box from '@uitoolkit/Box';
 
 const StyledCard = styled(Box)`
   border-radius: ${({ theme }) => theme.shape.borderRadius};
-  /* background-color: ${({ theme, bgColor }) => theme.helpers.getColor(bgColor)}; */
   color: ${({ isDark }) => (isDark ? 'white' : 'currentColor')};
   padding: ${({ theme, p }) => theme.helpers.getSpacing(p)};
   ${({ theme, hasBorder }) =>

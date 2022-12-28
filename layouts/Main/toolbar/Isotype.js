@@ -23,8 +23,7 @@ const Isotype = () => {
     handleFiltered(value);
   };
   const handleClear = () => {
-    console.info('clear');
-    setSearchText('hi');
+    setSearchText('');
     setIconsFiltered(iconData.icons);
   };
   const handleFiltered = (value) => {
@@ -62,7 +61,6 @@ const Isotype = () => {
           display="grid"
           style={{
             gridTemplateColumns: 'repeat(3, 1fr)',
-            // gridAutoRows: 'auto',
             gridGap: '1rem',
           }}
         >
@@ -84,11 +82,9 @@ const Isotype = () => {
           })}
         </Box>
       </Stack>
-      <Stack spacing={4} value="color">
+      <Stack spacing={2.5} value="color">
         <Box>
-          <Typography variant="body2" color="textSecondary">
-            Size
-          </Typography>
+          <Typography variant="caption">Size</Typography>
           <Slider
             value={logo.iconSize}
             min={50}
@@ -101,9 +97,10 @@ const Isotype = () => {
           />
         </Box>
         <Box>
+          <Typography variant="caption">Color</Typography>
           <ColorPicker
             width={236}
-            height={160}
+            height={140}
             color={logo.iconColor}
             onChange={(color) => updateLogo({ iconColor: color.hex })}
           />

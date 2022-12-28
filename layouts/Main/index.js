@@ -16,21 +16,25 @@ import * as toolbar from 'layouts/Main/toolbar';
 
 const menuItems = [
   {
+    id: 'Text',
     icon: <TypographyIcon />,
     name: 'Text',
     pathname: '/groups/[groupId]/championships/[championshipId]',
   },
   {
+    id: 'Isotype',
     icon: <ChartBubbleIcon />,
-    name: 'Isotype',
+    name: 'Icons',
     pathname: '/groups/[groupId]/championships/[championshipId]/stats',
   },
   {
+    id: 'LogoBox',
     icon: <SquaresFilledIcon />,
     name: 'Box',
     pathname: '/groups/[groupId]/championships/[championshipId]/matches',
   },
   {
+    id: 'Layout',
     icon: <LayoutDashboardIcon />,
     name: 'Layout',
     pathname: '/groups/[groupId]/championships/[championshipId]/matches',
@@ -48,11 +52,11 @@ const Main = ({ children }) => {
           <BrandItem>
             <PencilRulerIcon size={34} />
           </BrandItem>
-          {menuItems.map(({ icon, name }) => (
+          {menuItems.map(({ id, icon, name }) => (
             <MenuItem
-              key={name}
-              isActive={Boolean(activeToolbar === name)}
-              onClick={() => setActiveToolbar(name)}
+              key={id}
+              isActive={Boolean(activeToolbar === id)}
+              onClick={() => setActiveToolbar(id)}
             >
               <div>
                 {icon}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled, { css } from 'styled-components';
 import Box from '../Box';
 const HEIGHT = 50; // move to basteTheme with size variants: normal and small;
@@ -116,6 +116,11 @@ const TextField = ({
     setValue(event.target?.value);
     onChange(event);
   };
+
+  useEffect(() => {
+    setValue(initValue);
+  }, [initValue]);
+
   return (
     <StyledTextField fullWidth={fullWidth}>
       <StyledLabel

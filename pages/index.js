@@ -16,7 +16,7 @@ const Home = () => {
       </Head>
       <main style={{ backgroundColor: logo.backgroundColor, height: '100%', width: '100%' }}>
         <div>
-          <div>
+          <div style={{ padding: `${logo.boxMargins}px` }}>
             <div
               className={logo.fontFamily}
               style={{
@@ -29,9 +29,9 @@ const Home = () => {
               {logo.text}
             </div>
             <Icon color={logo.iconColor} size={logo.iconSize} />
-            <pre>
+            {/* <pre>
               <code>{JSON.stringify(logo, null, 6)}</code>
-            </pre>
+            </pre> */}
           </div>
         </div>
       </main>

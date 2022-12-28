@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 const StyledLogoBox = styled.div`
   /* border: 1px solid #eee; */
-  width: 500px;
-  height: 500px;
+  /* width: 500px;
+  height: 500px; */
   display: flex;
   justify-content: center;
   align-items: center;
