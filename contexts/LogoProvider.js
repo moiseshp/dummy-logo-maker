@@ -14,7 +14,7 @@ const initLogo = {
   iconId: 'Dolphin',
   iconColor: '#FF00FF',
   iconSize: 50,
-  layout: 'logo',
+  layout: 'IconLeft',
   text: 'DummyLogo',
   boxMargins: 0,
 };

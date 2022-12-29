@@ -8,7 +8,7 @@ import Stack from '@uitoolkit/Stack';
 import Box from '@uitoolkit/Box';
 import Tabs from '@uitoolkit/Tabs';
 import Card from '@uitoolkit/Card';
-import iconData from 'components/icons/icon-data.json';
+import mdiIcons from 'utils/mdi-icons.json';
 import SearchIcon from '@icons/components/Search';
 import CloseIcon from '@icons/components/Close';
 import { useLogo } from 'contexts/LogoProvider';
@@ -16,7 +16,7 @@ import { useLogo } from 'contexts/LogoProvider';
 const Isotype = () => {
   const [logo, updateLogo] = useLogo();
   const [searchText, setSearchText] = useState('');
-  const [iconsFiltered, setIconsFiltered] = useState(iconData.icons);
+  const [iconsFiltered, setIconsFiltered] = useState(mdiIcons.icons);
   const handleSearch = (event) => {
     const { value } = event?.target;
     setSearchText(value);
@@ -24,10 +24,10 @@ const Isotype = () => {
   };
   const handleClear = () => {
     setSearchText('');
-    setIconsFiltered(iconData.icons);
+    setIconsFiltered(mdiIcons.icons);
   };
   const handleFiltered = (value) => {
-    const icons = iconData.icons.filter(({ tags }) => tags.join().includes(value.toLowerCase()));
+    const icons = mdiIcons.icons.filter(({ tags }) => tags.join().includes(value.toLowerCase()));
     setIconsFiltered(icons);
   };
   return (
@@ -99,7 +99,7 @@ const Isotype = () => {
         <Box>
           <Typography variant="caption">Color</Typography>
           <ColorPicker
-            width={236}
+            width={252}
             height={140}
             color={logo.iconColor}
             onChange={(color) => updateLogo({ iconColor: color.hex })}

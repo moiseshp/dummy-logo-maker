@@ -11,7 +11,7 @@ const LogoBox = () => {
   return (
     <Stack spacing={2.5} mt={3}>
       <Box>
-        <Typography variant="caption">Size</Typography>
+        <Typography variant="caption">Margins</Typography>
         <Slider
           value={logo.boxMargins}
           min={0}
@@ -24,9 +24,9 @@ const LogoBox = () => {
         />
       </Box>
       <Box>
-        <Typography variant="caption">Size</Typography>
+        <Typography variant="caption">Color</Typography>
         <ColorPicker
-          width={236}
+          width={252}
           height={140}
           color={logo.backgroundColor}
           onChange={(color) => updateLogo({ backgroundColor: color.hex })}

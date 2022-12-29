@@ -25,7 +25,7 @@ const StyledTrack = styled.div`
 const StlyedTrackSlider = styled.div`
   height: 100%;
   background-color: ${({ theme, disabled }) => theme.pallete[disabled ? 'lightGray' : 'primary']};
-  width: ${({ slide }) => slide}%;
+  width: ${({ track }) => track}%;
 `;
 
 const StyledControl = styled.div`
@@ -43,7 +43,7 @@ const StyledControlSlider = styled.span`
   background-color: ${({ theme, disabled }) => theme.pallete[disabled ? 'lightGray' : 'primary']};
   border-radius: 100%;
   position: absolute;
-  left: ${({ slide }) => slide}%;
+  left: ${({ track }) => track}%;
 `;
 
 const StyledInput = styled.input`
@@ -75,8 +75,8 @@ const Slider = ({
 }) => {
   const [value, setValue] = useState(initValue);
   const calculateTrackSlide = () => {
-    const slides = (100 / (max - min)) * step;
-    return slides * (value - min);
+    const track = (100 / (max - min)) * step;
+    return track * (value - min);
   };
 
   const handleChange = (event) => {
@@ -86,10 +86,10 @@ const Slider = ({
   return (
     <StyledSlider>
       <StyledTrack>
-        <StlyedTrackSlider slide={calculateTrackSlide} disabled={disabled} />
+        <StlyedTrackSlider track={calculateTrackSlide} disabled={disabled} />
       </StyledTrack>
       <StyledControl>
-        <StyledControlSlider slide={calculateTrackSlide} disabled={disabled} />
+        <StyledControlSlider track={calculateTrackSlide} disabled={disabled} />
       </StyledControl>
       <StyledInput
         type="range"

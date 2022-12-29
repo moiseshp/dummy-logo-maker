@@ -87,7 +87,7 @@ const Text = () => {
         <Box>
           <Typography variant="caption">Color</Typography>
           <ColorPicker
-            width={236}
+            width={252}
             height={140}
             color={logo.color}
             onChange={(color) => updateLogo({ color: color.hex })}
