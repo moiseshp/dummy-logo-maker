@@ -12,7 +12,7 @@ const Layout = () => {
   return (
     <Box mt={3}>
       <Typography variant="caption">Layouts</Typography>
-      <Stack spacing={1}>
+      <Stack spacing={2}>
         {layouts.map((item) => (
           <Card
             key={item}

@@ -1,11 +1,9 @@
-import Box from '@uitoolkit/Box';
-import Typography from '@uitoolkit/Typography';
 import styled, { css } from 'styled-components';
-import { getFlexDirection } from './getFlexDirection';
+import { getDirection, getFlexDirection } from 'utils/layout';
 
 const StyledLayoutItem = styled.div`
   position: relative;
-  height: ${({ theme }) => theme.helpers.getRem(150)};
+  height: ${({ theme }) => theme.helpers.getRem(120)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +13,7 @@ const StyledBox = styled.div`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.helpers.getRem(10)};
-  direction: ${({ variant }) => (variant === 'Icon-Left' ? 'ltr' : 'rtl')};
+  direction: ${({ variant }) => getDirection(variant)};
   flex-direction: ${({ variant }) => getFlexDirection(variant)};
 `;
 
@@ -42,11 +40,6 @@ const LayoutItem = ({ variant }) => {
         <StyledIcon />
         <StyledLogo />
       </StyledBox>
-      <Box position="absolute" top={8} left={8}>
-        <Typography variant="caption" color="disabled">
-          {variant.replace('-', ' ')}
-        </Typography>
-      </Box>
     </StyledLayoutItem>
   );
 };

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import MainLayout from 'layouts/Main';
 import { useLogo } from 'contexts/LogoProvider';
 import * as icons from 'components/icons';
+import { getDirection, getFlexDirection } from 'utils/layout';
 
 const Home = () => {
   const [logo] = useLogo();
@@ -15,25 +16,30 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main style={{ backgroundColor: logo.backgroundColor, height: '100%', width: '100%' }}>
-        <div>
-          <div style={{ padding: `${logo.boxMargins}px` }}>
-            <div
-              className={logo.fontFamily}
-              style={{
-                color: logo.color,
-                fontSize: `${logo.fontSize}px`,
-                letterSpacing: logo.letterSpacing,
-                fontWeight: logo.fontWeight,
-              }}
-            >
-              {logo.text}
-            </div>
-            <Icon color={logo.iconColor} size={logo.iconSize} />
-            {/* <pre>
-              <code>{JSON.stringify(logo, null, 6)}</code>
-            </pre> */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 10,
+            direction: getDirection(logo.layout),
+            flexDirection: getFlexDirection(logo.layout),
+            padding: `${logo.boxMargins}px`,
+          }}
+        >
+          <Icon color={logo.iconColor} size={logo.iconSize} />
+          <div
+            className={logo.fontFamily}
+            style={{
+              color: logo.color,
+              fontSize: `${logo.fontSize}px`,
+              letterSpacing: logo.letterSpacing,
+              fontWeight: logo.fontWeight,
+            }}
+          >
+            {logo.text}
           </div>
         </div>
+        {/* </div> */}
       </main>
     </>
   );
