@@ -7,4 +7,9 @@ export { default as Cow } from './components/Cow';
 export { default as Dog } from './components/Dog';
 export { default as Dolphin } from './components/Dolphin';
 export { default as Spider } from './components/Spider';
+export { default as AccountSchool } from './components/AccountSchool';
+export { default as Earbuds } from './components/Earbuds';
+export { default as Equalizer } from './components/Equalizer';
+export { default as HeadPhones } from './components/HeadPhones';
+export { default as ShieldAccount } from './components/ShieldAccount';
 // https://materialdesignicons.com/tag/animal

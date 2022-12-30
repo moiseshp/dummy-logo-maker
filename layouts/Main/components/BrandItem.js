@@ -3,6 +3,7 @@ import MenuItem from './MenuItem';
 
 const StyledBrandItem = styled(MenuItem)`
   border-bottom: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray}`};
+  cursor: default;
 `;
 
 const BrandItem = ({ children }) => {

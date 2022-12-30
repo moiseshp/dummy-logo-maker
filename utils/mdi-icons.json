@@ -9,6 +9,31 @@
     { "id": "Cow", "name": "Cow", "tags": ["cow", "nature", "animal", "agriculture"] },
     { "id": "Dog", "name": "Dog", "tags": ["dog", "animal"] },
     { "id": "Dolphin", "name": "Dolphin", "tags": ["dolphin", "animal"] },
-    { "id": "Spider", "name": "Spider", "tags": ["spider", "animal", "holiday", "nature"] }
+    { "id": "Spider", "name": "Spider", "tags": ["spider", "animal", "holiday", "nature"] },
+    {
+      "id": "AccountSchool",
+      "name": "Graduation",
+      "tags": ["school", "student", "graduation", "person", "holiday"]
+    },
+    {
+      "id": "ShieldAccount",
+      "name": "Shield",
+      "tags": ["shield", "security", "person", "alarm"]
+    },
+    {
+      "id": "HeadPhones",
+      "name": "Headphones",
+      "tags": ["headphones", "audio", "tech", "music"]
+    },
+    {
+      "id": "Equalizer",
+      "name": "Equalizer",
+      "tags": ["equalizer", "audio", "tech", "music"]
+    },
+    {
+      "id": "Earbuds",
+      "name": "Earbuds",
+      "tags": ["earbuds", "audio", "tech", "music", "headphones"]
+    }
   ]
 }
