@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@styled-icons/material": "^10.47.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-color-palette": "^6.2.0",

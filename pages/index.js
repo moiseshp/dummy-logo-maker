@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import MainLayout from 'layouts/Main';
 import { useLogo } from 'contexts/LogoProvider';
-import * as icons from 'components/icons';
 import { getDirection, getFlexDirection } from 'utils/layout';
+import * as icons from '@styled-icons/material';
 
 const Home = () => {
   const [logo] = useLogo();

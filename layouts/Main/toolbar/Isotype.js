@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as icons from 'components/icons';
+import * as icons from '@styled-icons/material';
 import ColorPicker from 'components/ColorPicker';
 import TextField from '@uitoolkit/TextField';
 import Slider from '@uitoolkit/Slider';
@@ -8,7 +8,7 @@ import Stack from '@uitoolkit/Stack';
 import Box from '@uitoolkit/Box';
 import Tabs from '@uitoolkit/Tabs';
 import Card from '@uitoolkit/Card';
-import mdiIcons from 'utils/mdi-icons.json';
+import materialIcons from 'utils/material-icons.json';
 import SearchIcon from '@icons/components/Search';
 import CloseIcon from '@icons/components/Close';
 import { useLogo } from 'contexts/LogoProvider';
@@ -16,7 +16,7 @@ import { useLogo } from 'contexts/LogoProvider';
 const Isotype = () => {
   const [logo, updateLogo] = useLogo();
   const [searchText, setSearchText] = useState('');
-  const [iconsFiltered, setIconsFiltered] = useState(mdiIcons.icons);
+  const [iconsFiltered, setIconsFiltered] = useState(materialIcons);
   const handleSearch = (event) => {
     const { value } = event?.target;
     setSearchText(value);
@@ -24,10 +24,10 @@ const Isotype = () => {
   };
   const handleClear = () => {
     setSearchText('');
-    setIconsFiltered(mdiIcons.icons);
+    setIconsFiltered(materialIcons);
   };
   const handleFiltered = (value) => {
-    const icons = mdiIcons.icons.filter(({ tags }) => tags.join().includes(value.toLowerCase()));
+    const icons = materialIcons.filter(({ tags }) => tags.join().includes(value.toLowerCase()));
     setIconsFiltered(icons);
   };
   return (
