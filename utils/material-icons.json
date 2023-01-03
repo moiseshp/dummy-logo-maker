@@ -111,7 +111,7 @@
   {
     "id": "School",
     "name": "School",
-    "tags": ["school", "graduate", "holiday"]
+    "tags": ["school", "graduate", "graduation", "holiday"]
   },
   {
     "id": "SportsEsports",
@@ -132,5 +132,55 @@
     "id": "Vaccines",
     "name": "Vaccines",
     "tags": ["vaccines", "health", "injectable"]
+  },
+  {
+    "id": "SportsBasketball",
+    "name": "SportsBasketball",
+    "tags": ["basketball", "sports"]
+  },
+  {
+    "id": "Sports",
+    "name": "Whistle",
+    "tags": ["whistle", "sports", "match"]
+  },
+  {
+    "id": "SportsTennis",
+    "name": "Tennis",
+    "tags": ["tennis", "sports"]
+  },
+  {
+    "id": "Cookie",
+    "name": "Cookie",
+    "tags": ["cookie"]
+  },
+  {
+    "id": "CrueltyFree",
+    "name": "Rabbit",
+    "tags": ["rabbit", "animals", "pets"]
+  },
+  {
+    "id": "OutdoorGrill",
+    "name": "Outdoor Grill",
+    "tags": ["grill", "outdoor"]
+  },
+  {
+    "id": "HeartBroken",
+    "name": "Heart Broken",
+    "tags": ["broken", "heart"]
+  },
+  {
+    "id": "Fireplace",
+    "name": "Fireplace",
+    "tags": ["fireplace", "fire"]
+  },
+  {
+    "id": "Piano",
+    "name": "Piano",
+    "tags": ["piano", "music", "audio"]
+  },
+  {
+    "id": "Surfing",
+    "name": "Surfing",
+    "tags": ["surfing", "summer", "beach"]
   }
 ]

@@ -43,7 +43,7 @@ const MyApp = ({ Component, pageProps }) => {
     <ThemeProvider theme={theme}>
       <Head>
         <title>Dummy Logo Maker</title>
-        <meta name="theme-color" content={theme.pallete.body} />
+        <meta name="theme-color" content={theme.palette.body} />
       </Head>
       <GlobalStyleSheet />
 

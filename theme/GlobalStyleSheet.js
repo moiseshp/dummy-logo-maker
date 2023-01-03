@@ -19,15 +19,15 @@ export const GlobalStyleSheet = createGlobalStyle`
 
   body {
     font-size: ${({ theme }) => theme.typography.fontSize};
-    color: ${({ theme }) => theme.pallete.textPrimary};
+    color: ${({ theme }) => theme.palette.textPrimary};
     font-weight: ${({ theme }) => theme.typography.fontWeightRegular};
     margin: 0;
     padding: 0;
-    background-color: ${({ theme }) => theme.pallete.body} 
+    background-color: ${({ theme }) => theme.palette.body} 
   }
 
   a {
-    color: ${({ theme }) => theme.pallete.primary}
+    color: ${({ theme }) => theme.palette.primary}
   }
 
   strong {

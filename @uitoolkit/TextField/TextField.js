@@ -24,7 +24,7 @@ const StyleFieldset = styled.fieldset`
   border-width: ${({ theme }) => theme.helpers.getRem(1)};
   border-style: solid;
   min-width: 0%;
-  border-color: ${({ theme, isFocus }) => theme.pallete[isFocus ? 'primary' : 'textSecondary']};
+  border-color: ${({ theme, isFocus }) => theme.palette[isFocus ? 'primary' : 'textSecondary']};
   margin: 0;
   legend {
     padding: 0 ${({ theme }) => theme.helpers.getRem(5)};
@@ -70,7 +70,7 @@ const StyledLabel = styled.label`
   z-index: 1;
   padding-left: ${({ theme, startIcon }) => theme.helpers.getRem(startIcon ? 40 : 5)};
   padding-right: ${({ theme, endIcon }) => theme.helpers.getRem(endIcon ? 40 : 5)};
-  color: ${({ theme, isFocus }) => theme.pallete[isFocus ? 'primary' : 'textSecondary']};
+  color: ${({ theme, isFocus }) => theme.palette[isFocus ? 'primary' : 'textSecondary']};
   transform: ${({ theme }) =>
     css`translate(${theme.helpers.getRem(10)},  ${theme.helpers.getRem(14.2)}) scale(1)`};
   ${({ theme, isActive }) =>

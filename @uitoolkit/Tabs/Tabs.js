@@ -4,13 +4,13 @@ import styled, { css } from 'styled-components';
 
 const StyledTabs = styled(Box)`
   display: flex;
-  border-bottom: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray};`};
+  border-bottom: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.palette.lightGray};`};
   justify-content: ${({ fixesTabs }) => (fixesTabs ? 'space-between' : 'normal')};
 `;
 
 const StyledTab = styled(Box)`
   font-size: ${({ theme }) => theme.typography.variants.body2};
-  color: ${({ theme, isActive }) => (isActive ? theme.pallete.primary : 'inherit')};
+  color: ${({ theme, isActive }) => (isActive ? theme.palette.primary : 'inherit')};
   padding: ${({ theme }) => theme.helpers.getSpacing(3)};
   height: ${({ theme }) => theme.helpers.getRem(40)};
   display: flex;
@@ -31,7 +31,7 @@ const StyledTab = styled(Box)`
         height: ${theme.helpers.getRem(2)};
         left: 0;
         right: 0;
-        background-color: ${theme.pallete.primary};
+        background-color: ${theme.palette.primary};
       }
     `}
 `;

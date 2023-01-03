@@ -7,7 +7,7 @@ const StyledMenuBar = styled.nav`
   left: 0;
   position: absolute;
   width: ${({ theme }) => theme.helpers.getRem(80)};
-  border-right: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray}`};
+  border-right: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.palette.lightGray}`};
 `;
 
 const MenuBar = ({ children }) => {

@@ -12,7 +12,7 @@ const StyledMenuItem = styled.div`
   color: ${({ theme, color, isActive }) => theme.helpers.getColor(isActive ? 'secondary' : color)};
   font-weight: ${({ theme, isActive }) => theme.typography[isActive ? 'bolder' : 'regular']};
   &:hover {
-    color: ${({ theme }) => theme.pallete.secondary};
+    color: ${({ theme }) => theme.palette.secondary};
   }
 `;
 

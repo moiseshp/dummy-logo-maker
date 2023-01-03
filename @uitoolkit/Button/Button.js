@@ -29,7 +29,7 @@ const StyledButton = styled.button`
     ${variant !== 'text' &&
     css`
       border: ${theme.helpers.getRem(1)} solid
-        ${theme.helpers.getColor(color) || theme.pallete.textPrimary};
+        ${theme.helpers.getColor(color) || theme.palette.textPrimary};
     `}
     ${variant !== 'contained' &&
     css`

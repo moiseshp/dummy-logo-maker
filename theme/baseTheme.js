@@ -1,9 +1,9 @@
-// Pallete: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
+// palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
 export const baseTheme = {
   icon: {
     size: 24,
   },
-  pallete: {
+  palette: {
     primary: '#212529',
     secondary: '#0033FF',
     accent: '#37003C',

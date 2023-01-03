@@ -18,18 +18,18 @@ const StyledBox = styled.div`
 `;
 
 const StyledIcon = styled.div`
-  background-color: ${({ theme }) => theme.pallete.lightGray};
+  background-color: ${({ theme }) => theme.palette.lightGray};
   width: ${({ theme }) => theme.helpers.getRem(50)};
   height: ${({ theme }) => theme.helpers.getRem(50)};
-  border: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray}`};
+  border: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.palette.lightGray}`};
   border-radius: ${({ theme }) => theme.shape.borderRadius};
 `;
 
 const StyledLogo = styled.div`
-  background-color: ${({ theme }) => theme.pallete.lightGray};
+  background-color: ${({ theme }) => theme.palette.lightGray};
   width: ${({ theme }) => theme.helpers.getRem(120)};
   height: ${({ theme }) => theme.helpers.getRem(24)};
-  border: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.pallete.lightGray}`};
+  border: ${({ theme }) => `${theme.helpers.getRem(1)} solid ${theme.palette.lightGray}`};
   border-radius: ${({ theme }) => theme.shape.borderRadius};
 `;
 
