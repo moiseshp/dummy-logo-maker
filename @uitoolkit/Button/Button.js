@@ -48,7 +48,7 @@ const IconBox = styled.span`
       align-items: center;
       height: ${theme.button.size[size]};
       line-height: ${theme.button.size[size]};
-      margin-${marginDirection}: ${theme.helpers.numberToRem(10)};
+      margin-${marginDirection}: ${theme.helpers.getRem(10)};
     `}
 `;
 

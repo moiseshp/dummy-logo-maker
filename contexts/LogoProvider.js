@@ -11,12 +11,13 @@ const initLogo = {
   fontSize: 20,
   letterSpacing: 1,
   backgroundColor: '#00FF00',
-  iconId: 'Dolphin',
+  iconId: 'ShoppingCart',
   iconColor: '#FF00FF',
   iconSize: 50,
   layout: 'IconLeft',
   text: 'DummyLogo',
-  boxMargins: 0,
+  padding: 50,
+  gap: 20,
 };
 
 const LogoProvider = ({ children }) => {

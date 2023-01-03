@@ -1,17 +1,16 @@
 import { useState } from 'react';
 import BrandItem from 'layouts/Main/components/BrandItem';
-import MainContent from 'layouts/Main/components/MainContent';
+import Main from 'layouts/Main/components/Main';
 import MenuBar from 'layouts/Main/components/MenuBar';
 import MenuItem from 'layouts/Main/components/MenuItem';
 import Sidebar from 'layouts/Main/components/Sidebar';
 import ToolbarAside from 'layouts/Main/components/ToolbarAside';
-import LogoBoxContainer from 'layouts/Main/components/LogoBoxContainer';
-import LogoBox from 'layouts/Main/components/LogoBox';
 // import PencilRulerIcon from 'components/icons/components/PencilRuler';
 import TypographyIcon from '@icons/components/Typography';
 import ChartBubbleIcon from '@icons/components/ChartBubble';
 import SquaresFilledIcon from '@icons/components/SquaresFilled';
 import LayoutDashboardIcon from '@icons/components/LayoutDashboard';
+import Box from '@uitoolkit/Box';
 import * as toolbar from 'layouts/Main/toolbar';
 
 const menuItems = [
@@ -41,7 +40,7 @@ const menuItems = [
   },
 ];
 
-const Main = ({ children }) => {
+const MainLayout = ({ children }) => {
   const [activeToolbar, setActiveToolbar] = useState('Text');
   const Toolbar = toolbar[activeToolbar];
 
@@ -67,14 +66,11 @@ const Main = ({ children }) => {
           <Toolbar />
         </ToolbarAside>
       </Sidebar>
-      <MainContent>
-        <LogoBoxContainer>
-          <LogoBox>{children}</LogoBox>
-          <div>Sizing | Zoom | Download Button</div>
-        </LogoBoxContainer>
-      </MainContent>
+      <Main>
+        <Box>{children}</Box>
+      </Main>
     </>
   );
 };
 
-export default Main;
+export default MainLayout;

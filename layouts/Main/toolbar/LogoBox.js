@@ -11,14 +11,27 @@ const LogoBox = () => {
   return (
     <Stack spacing={2.5} mt={3}>
       <Box>
-        <Typography variant="caption">Margins</Typography>
+        <Typography variant="caption">Padding</Typography>
         <Slider
-          value={logo.boxMargins}
+          value={logo.padding}
           min={0}
           max={200}
           onChange={(event) =>
             updateLogo({
-              boxMargins: Number(event.target?.value),
+              padding: Number(event.target?.value),
+            })
+          }
+        />
+      </Box>
+      <Box>
+        <Typography variant="caption">Gap</Typography>
+        <Slider
+          value={logo.gap}
+          min={0}
+          max={100}
+          onChange={(event) =>
+            updateLogo({
+              gap: Number(event.target?.value),
             })
           }
         />

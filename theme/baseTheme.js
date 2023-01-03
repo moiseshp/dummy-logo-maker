@@ -42,7 +42,7 @@ export const baseTheme = {
     modal: 2001,
   },
   shape: {
-    borderRadius: 2,
+    borderRadius: 4,
   },
   button: {
     size: {
