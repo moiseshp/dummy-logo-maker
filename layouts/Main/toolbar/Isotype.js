@@ -8,7 +8,7 @@ import Stack from '@uitoolkit/Stack';
 import Box from '@uitoolkit/Box';
 import Tabs from '@uitoolkit/Tabs';
 import Card from '@uitoolkit/Card';
-import materialIcons from 'utils/material-icons.json';
+import materialIcons from 'data/material-icons.json';
 import SearchIcon from '@icons/components/Search';
 import CloseIcon from '@icons/components/Close';
 import { useLogo } from 'contexts/LogoProvider';

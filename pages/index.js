@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import { downloadImage } from 'utils/downloadImage';
 import Head from 'next/head';
 import MainLayout from 'layouts/Main';
 import { useLogo } from 'contexts/LogoProvider';
@@ -7,6 +9,10 @@ import * as icons from '@styled-icons/material';
 const Home = () => {
   const [logo] = useLogo();
   const Icon = icons[logo.iconId];
+  const htmlDivElementRef = useRef();
+  const handleDownload = () => {
+    downloadImage(htmlDivElementRef.current);
+  };
   return (
     <>
       <Head>
@@ -15,7 +21,10 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main style={{ backgroundColor: logo.backgroundColor, height: '100%', width: '100%' }}>
+      <main
+        ref={htmlDivElementRef}
+        style={{ backgroundColor: logo.backgroundColor, height: '100%', width: '100%' }}
+      >
         <div
           style={{
             display: 'flex',
@@ -39,8 +48,8 @@ const Home = () => {
             {logo.text}
           </div>
         </div>
-        {/* </div> */}
       </main>
+      <button onClick={handleDownload}>Download</button>
     </>
   );
 };

@@ -8,7 +8,7 @@ import Box from '@uitoolkit/Box';
 import Tabs from '@uitoolkit/Tabs';
 import Button from '@uitoolkit/Button';
 import Card from '@uitoolkit/Card';
-import googleFonts from 'utils/google-fonts.json';
+import googleFonts from 'data/google-fonts.json';
 
 const Text = () => {
   const [logo, updateLogo] = useLogo();

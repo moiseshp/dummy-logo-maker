@@ -2,7 +2,7 @@ import { useLogo } from 'contexts/LogoProvider';
 import Card from '@uitoolkit/Card';
 import Stack from '@uitoolkit/Stack';
 import Typography from '@uitoolkit/Typography';
-import layouts from 'utils/layouts.json';
+import layouts from 'data/layouts.json';
 import Box from '@uitoolkit/Box';
 import LayoutItem from './Item';
 
