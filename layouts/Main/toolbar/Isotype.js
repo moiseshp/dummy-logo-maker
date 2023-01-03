@@ -12,6 +12,7 @@ import materialIcons from 'utils/material-icons.json';
 import SearchIcon from '@icons/components/Search';
 import CloseIcon from '@icons/components/Close';
 import { useLogo } from 'contexts/LogoProvider';
+// https://fonts.google.com/icons?selected=Material+Icons
 
 const Isotype = () => {
   const [logo, updateLogo] = useLogo();

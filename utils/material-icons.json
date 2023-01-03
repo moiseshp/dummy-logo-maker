@@ -26,7 +26,7 @@
   {
     "id": "Savings",
     "name": "Savings",
-    "tags": ["savings", "pig"]
+    "tags": ["savings", "pig", "animals", "pets"]
   },
   {
     "id": "QuestionAnswer",
@@ -36,7 +36,7 @@
   {
     "id": "Pets",
     "name": "Pets",
-    "tags": ["pets"]
+    "tags": ["pets", "animals"]
   },
   {
     "id": "ShoppingBasket",
@@ -82,5 +82,55 @@
     "id": "Accessible",
     "name": "Accessible",
     "tags": ["accessible"]
+  },
+  {
+    "id": "Commute",
+    "name": "Bus",
+    "tags": ["Commute", "bus", "automovil"]
+  },
+  {
+    "id": "Opacity",
+    "name": "Color",
+    "tags": ["color", "drop", "design", "art"]
+  },
+  {
+    "id": "Anchor",
+    "name": "Anchor",
+    "tags": ["anchor"]
+  },
+  {
+    "id": "Balance",
+    "name": "Balance",
+    "tags": ["balance"]
+  },
+  {
+    "id": "Notifications",
+    "name": "Bell",
+    "tags": ["bell", "notifications"]
+  },
+  {
+    "id": "School",
+    "name": "School",
+    "tags": ["school", "graduate", "holiday"]
+  },
+  {
+    "id": "SportsEsports",
+    "name": "Game",
+    "tags": ["sports esports", "games"]
+  },
+  {
+    "id": "Cake",
+    "name": "Cake",
+    "tags": ["cake", "happy birthay"]
+  },
+  {
+    "id": "Luggage",
+    "name": "Luggage",
+    "tags": ["luggage", "travel", "bag"]
+  },
+  {
+    "id": "Vaccines",
+    "name": "Vaccines",
+    "tags": ["vaccines", "health", "injectable"]
   }
 ]
