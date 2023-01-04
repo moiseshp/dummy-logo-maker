@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
 import { downloadImage } from 'utils/downloadImage';
-import Head from 'next/head';
 import MainLayout from 'layouts/Main';
 import { useLogo } from 'contexts/LogoProvider';
 import { getDirection, getFlexDirection } from 'utils/layout';

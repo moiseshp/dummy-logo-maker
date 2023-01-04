@@ -26,7 +26,7 @@ const Text = () => {
           <Typography variant="caption">Type your logo name</Typography>
           <TextField
             fullWidth
-            placeholder="Eg. DummyLogo"
+            placeholder="Eg. Amazing Logo"
             value={logo.text}
             onChange={(event) =>
               updateLogo({
@@ -62,8 +62,8 @@ const Text = () => {
           <Typography variant="caption">Font size</Typography>
           <Slider
             value={logo.fontSize}
-            min={20}
-            max={60}
+            min={10}
+            max={160}
             onChange={(event) =>
               updateLogo({
                 fontSize: Number(event.target?.value),
@@ -75,8 +75,8 @@ const Text = () => {
           <Typography variant="caption">Letter spacing</Typography>
           <Slider
             value={logo.letterSpacing}
-            min={1}
-            max={10}
+            min={-20}
+            max={80}
             onChange={(event) =>
               updateLogo({
                 letterSpacing: Number(event.target?.value),

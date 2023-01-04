@@ -92,7 +92,7 @@ const Isotype = () => {
           <Slider
             value={logo.iconSize}
             min={50}
-            max={200}
+            max={300}
             onChange={(event) =>
               updateLogo({
                 iconSize: Number(event.target?.value),

@@ -15,7 +15,7 @@ const LogoBox = () => {
         <Slider
           value={logo.padding}
           min={0}
-          max={200}
+          max={300}
           onChange={(event) =>
             updateLogo({
               padding: Number(event.target?.value),
