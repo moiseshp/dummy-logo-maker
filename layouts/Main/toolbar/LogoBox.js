@@ -37,7 +37,7 @@ const LogoBox = () => {
         />
       </Box>
       <Box>
-        <Typography variant="caption">Color</Typography>
+        <Typography variant="caption">Background</Typography>
         <ColorPicker
           width={252}
           height={140}

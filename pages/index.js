@@ -15,8 +15,19 @@ const StyledLogoBox = styled.div`
   justify-content: center;
   align-items: center;
   background-color: white;
-  border-radius: 8px;
   box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.05);
+  background-color: ${({ logo }) => logo.backgroundColor};
+  gap: ${({ theme, logo }) => theme.helpers.getRem(logo.gap)};
+  padding: ${({ theme, logo }) => theme.helpers.getRem(logo.padding)};
+  direction: ${({ logo }) => getDirection(logo.layout)};
+  flex-direction: ${({ logo }) => getFlexDirection(logo.layout)};
+`;
+
+const StyledLogoText = styled.div`
+  color: ${({ logo }) => logo.color};
+  font-size: ${({ theme, logo }) => theme.helpers.getRem(logo.fontSize)};
+  letter-spacing: ${({ theme, logo }) => theme.helpers.getRem(logo.letterSpacing)};
+  font-weight: ${({ logo }) => logo.fontWeight};
 `;
 
 const Home = () => {
@@ -34,35 +45,16 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <StyledLogoBox ref={htmlDivElementRef} style={{ backgroundColor: logo.backgroundColor }}>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: logo.gap,
-            direction: getDirection(logo.layout),
-            flexDirection: getFlexDirection(logo.layout),
-            padding: logo.padding,
-          }}
-        >
-          <Icon color={logo.iconColor} size={logo.iconSize} />
-          <div
-            className={logo.fontFamily}
-            style={{
-              color: logo.color,
-              fontSize: logo.fontSize,
-              letterSpacing: logo.letterSpacing,
-              fontWeight: logo.fontWeight,
-            }}
-          >
-            {logo.text}
-          </div>
-        </div>
+      <StyledLogoBox ref={htmlDivElementRef} logo={logo}>
+        <Icon color={logo.iconColor} size={logo.iconSize} />
+        <StyledLogoText className={logo.fontFamily} logo={logo}>
+          {logo.text}
+        </StyledLogoText>
       </StyledLogoBox>
       <Box mt={4} textAlign="center">
         <Button
           variant="contained"
-          color="secondary"
+          color="primary"
           size="large"
           onClick={handleDownload}
           startIcon={<TextResize />}

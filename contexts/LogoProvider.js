@@ -1,4 +1,3 @@
-// https://dev.to/edisonsanchez/next-js-react-con-context-api-3a05
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import storage from 'utils/storage';
 
@@ -14,7 +13,7 @@ const initLogo = {
   iconId: 'ShoppingCart',
   iconColor: '#FF00FF',
   iconSize: 50,
-  layout: 'IconLeft',
+  layout: 'Icon-Left',
   text: 'DummyLogo',
   padding: 50,
   gap: 20,
