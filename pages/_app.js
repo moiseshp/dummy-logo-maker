@@ -44,6 +44,12 @@ const MyApp = ({ Component, pageProps }) => {
       <Head>
         <title>Dummy Logo Maker</title>
         <meta name="theme-color" content={theme.palette.body} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="DUMMY LOGO MAKER is an easy, fast and even fun way to create your own dummy logo for your projects. Use the composition of logo + isotype, only logo or only isotype. In addition, you can also your dummy logo in landscape and portrait mode."
+        />
       </Head>
       <GlobalStyleSheet />
 
