@@ -1,3 +1,7 @@
+/**
+ * Material Icons:
+ * https://fonts.google.com/icons?selected=Material+Icons
+ */
 import { useState } from 'react';
 import * as icons from '@styled-icons/material';
 import ColorPicker from 'components/ColorPicker';
@@ -12,7 +16,6 @@ import materialIcons from 'data/material-icons.json';
 import SearchIcon from '@icons/components/Search';
 import CloseIcon from '@icons/components/Close';
 import { useLogo } from 'contexts/LogoProvider';
-// https://fonts.google.com/icons?selected=Material+Icons
 
 const Isotype = () => {
   const [logo, updateLogo] = useLogo();

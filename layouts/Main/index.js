@@ -5,7 +5,7 @@ import MenuBar from 'layouts/Main/components/MenuBar';
 import MenuItem from 'layouts/Main/components/MenuItem';
 import Sidebar from 'layouts/Main/components/Sidebar';
 import ToolbarAside from 'layouts/Main/components/ToolbarAside';
-// import PencilRulerIcon from 'components/icons/components/PencilRuler';
+import { DesignServices } from '@styled-icons/material';
 import TypographyIcon from '@icons/components/Typography';
 import ChartBubbleIcon from '@icons/components/ChartBubble';
 import SquaresFilledIcon from '@icons/components/SquaresFilled';
@@ -48,7 +48,9 @@ const MainLayout = ({ children }) => {
     <>
       <Sidebar>
         <MenuBar>
-          <BrandItem>{/* <PencilRulerIcon size={34} /> */}</BrandItem>
+          <BrandItem>
+            <DesignServices size={40} />
+          </BrandItem>
           {menuItems.map(({ id, icon, name }) => (
             <MenuItem
               key={id}
