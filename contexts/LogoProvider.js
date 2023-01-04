@@ -4,19 +4,19 @@ import storage from 'utils/storage';
 const LogoContext = createContext(null);
 
 const initLogo = {
-  color: '#FF0000',
-  fontFamily: 'Montserrat',
-  fontWeight: 'regular',
-  fontSize: 20,
+  color: '#ffffff',
+  fontFamily: 'Courier_Prime',
+  fontWeight: 'bold',
+  fontSize: 60,
   letterSpacing: 1,
-  backgroundColor: '#00FF00',
-  iconId: 'ShoppingCart',
-  iconColor: '#FF00FF',
-  iconSize: 50,
+  backgroundColor: '#0033FF',
+  iconId: 'Fingerprint',
+  iconColor: '#ffffff',
+  iconSize: 96,
   layout: 'Icon-Left',
-  text: 'DummyLogo',
-  padding: 50,
-  gap: 20,
+  text: 'Logotype',
+  padding: 70,
+  gap: 25,
 };
 
 const LogoProvider = ({ children }) => {
