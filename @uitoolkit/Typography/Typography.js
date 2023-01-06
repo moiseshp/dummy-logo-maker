@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const StyledTypography = styled.p`
-  font-size: ${({ theme, variant }) => theme.typography.variants[variant]};
+  font-size: ${({ theme, variant }) => theme.typography.variants[variant] || 'inherit'};
   color: ${({ theme, color }) => theme.helpers.getColor(color)};
   text-align: ${({ textAlign }) => textAlign};
   font-weight: ${({ theme, fontWeight }) => theme.typography[fontWeight]};
@@ -25,7 +25,6 @@ const Typography = ({ children, component, ...rest }) => (
 );
 
 Typography.defaultProps = {
-  variant: 'body1',
   component: 'p',
   color: 'inherit',
   textAlign: 'inherit',

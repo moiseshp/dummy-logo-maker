@@ -10,8 +10,10 @@ import TypographyIcon from '@icons/components/Typography';
 import ChartBubbleIcon from '@icons/components/ChartBubble';
 import SquaresFilledIcon from '@icons/components/SquaresFilled';
 import LayoutDashboardIcon from '@icons/components/LayoutDashboard';
+import Signature from 'components/Signature';
 import Box from '@uitoolkit/Box';
 import * as toolbar from 'layouts/Main/toolbar';
+import Typography from '@uitoolkit/Typography';
 
 const menuItems = [
   {
@@ -70,6 +72,11 @@ const MainLayout = ({ children }) => {
       </Sidebar>
       <Main>
         <Box>{children}</Box>
+        <Box position="absolute" bottom={0} height={40}>
+          <Typography variant="caption">
+            <Signature />
+          </Typography>
+        </Box>
       </Main>
     </>
   );
