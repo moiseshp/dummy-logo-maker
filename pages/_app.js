@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 import { ThemeProvider } from 'styled-components';
 import LogoProvider from 'contexts/LogoProvider';
 import { GlobalStyleSheet } from 'theme/GlobalStyleSheet';
@@ -41,6 +42,7 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyleSheet />
       <Head>
         <title>Dummy Logo Maker</title>
         <meta name="theme-color" content={theme.palette.body} />
@@ -51,8 +53,24 @@ const MyApp = ({ Component, pageProps }) => {
           content="DUMMY LOGO MAKER is an easy, fast and even fun way to create your own dummy logo for your projects. Use the composition of logo + isotype, only logo or only isotype. In addition, you can also your dummy logo in landscape and portrait mode."
         />
       </Head>
-      <GlobalStyleSheet />
-
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+          });
+        `,
+        }}
+      />
       <LogoProvider>
         <style jsx global>{`
           html {
