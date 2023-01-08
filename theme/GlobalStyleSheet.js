@@ -7,6 +7,7 @@ export const GlobalStyleSheet = createGlobalStyle`
     box-sizing: border-box;
     -webkit-tap-highlight-color: rgba(0,0,0, 0);
     -webkit-tap-highlight-color: transparent;
+    font-family: inherit
   }
 
   *:focus { outline:none !important }
@@ -18,19 +19,19 @@ export const GlobalStyleSheet = createGlobalStyle`
 
   body {
     font-size: ${({ theme }) => theme.typography.fontSize};
-    color: ${({ theme }) => theme.pallete.textPrimary};
+    color: ${({ theme }) => theme.palette.textPrimary};
     font-weight: ${({ theme }) => theme.typography.fontWeightRegular};
     margin: 0;
     padding: 0;
-    background-color: ${({ theme }) => theme.pallete.body} 
+    background-color: ${({ theme }) => theme.palette.body} 
   }
 
   a {
-    color: ${({ theme }) => theme.pallete.secondary}
+    color: ${({ theme }) => theme.palette.primary}
   }
 
   strong {
-    font-weight: ${({ theme }) => theme.typography.fontWeightBolder};
+    font-weight: ${({ theme }) => theme.typography.bolder};
   }
   
   button {

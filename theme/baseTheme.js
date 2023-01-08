@@ -1,27 +1,28 @@
-// Pallete: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
+// palette: https://coolors.co/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529
 export const baseTheme = {
   icon: {
     size: 24,
   },
-  pallete: {
-    primary: '#5E27DA',
-    secondary: '#212529',
+  palette: {
+    primary: '#212529',
+    secondary: '#0033FF',
     accent: '#37003C',
     error: 'red',
     info: '#5D27DB',
     success: '#26DB85',
     warning: '',
-    textPrimary: '#0F1114',
+    textPrimary: '#343A40',
     textSecondary: '#6C757D',
-    disabled: '#b5bfc9', // CED4DA
-    grayLight: '#e3eaf2',
-    body: '#fff',
+    disabled: '#ADB5BD',
+    lightGray: '#E9ECEF',
+    body: '#F8F9FA',
   },
   typography: {
-    htmlFontSize: '62.5%', // equivalent to 16px
+    // Default 100% is 16px. All rem will adapt accordingly if user changes browser font size.
+    htmlFontSize: '62.5%',
     fontSize: 16,
     regular: 400,
-    bolder: 500,
+    bolder: 600,
     bold: 800,
     variants: {
       h1: 40,
@@ -45,9 +46,9 @@ export const baseTheme = {
   },
   button: {
     size: {
-      small: 24,
-      medium: 32,
-      large: 40,
+      small: 26,
+      medium: 30,
+      large: 38,
     },
   },
   mixins: {

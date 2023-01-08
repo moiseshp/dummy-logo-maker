@@ -1,0 +1,186 @@
+[
+  {
+    "id": "ShoppingCart",
+    "name": "Shopping Cart",
+    "tags": ["shopping cart", "cart", "buy", "market"]
+  },
+  { "id": "Favorite", "name": "Favorite", "tags": ["favorite", "heart", "love"] },
+  { "id": "Fingerprint", "name": "Fingerprint", "tags": ["fingerprint", "identity"] },
+  { "id": "ShoppingBag", "name": "Shopping Bag", "tags": ["shopping", "bag", "buy", "market"] },
+  { "id": "Lightbulb", "name": "Lightbulb", "tags": ["lightbulb"] },
+  {
+    "id": "Print",
+    "name": "Print",
+    "tags": ["print", "computer", "technology", "graphic", "design"]
+  },
+  {
+    "id": "Store",
+    "name": "Store",
+    "tags": ["store", "market", "buy", "location"]
+  },
+  {
+    "id": "Grade",
+    "name": "Grade",
+    "tags": ["grade", "star"]
+  },
+  {
+    "id": "Savings",
+    "name": "Savings",
+    "tags": ["savings", "pig", "animals", "pets"]
+  },
+  {
+    "id": "QuestionAnswer",
+    "name": "Question Answer",
+    "tags": ["question answer", "comment", "chat"]
+  },
+  {
+    "id": "Pets",
+    "name": "Pets",
+    "tags": ["pets", "animals"]
+  },
+  {
+    "id": "ShoppingBasket",
+    "name": "Shopping Basket",
+    "tags": ["shopping basket"]
+  },
+  {
+    "id": "Leaderboard",
+    "name": "Leaderboard",
+    "tags": ["leaderboard"]
+  },
+  {
+    "id": "CardGiftcard",
+    "name": "Giftcard",
+    "tags": ["gifcard", "card"]
+  },
+  {
+    "id": "PanTool",
+    "name": "Pan Tool",
+    "tags": ["pantool"]
+  },
+  {
+    "id": "ThumbDown",
+    "name": "Thumb Down",
+    "tags": ["thumbdown"]
+  },
+  {
+    "id": "RocketLaunch",
+    "name": "Rocket Launch",
+    "tags": ["rocket launch"]
+  },
+  {
+    "id": "Support",
+    "name": "Support",
+    "tags": ["support"]
+  },
+  {
+    "id": "Https",
+    "name": "Padlock",
+    "tags": ["padlock", "https"]
+  },
+  {
+    "id": "Accessible",
+    "name": "Accessible",
+    "tags": ["accessible"]
+  },
+  {
+    "id": "Commute",
+    "name": "Bus",
+    "tags": ["Commute", "bus", "automovil"]
+  },
+  {
+    "id": "Opacity",
+    "name": "Color",
+    "tags": ["color", "drop", "design", "art"]
+  },
+  {
+    "id": "Anchor",
+    "name": "Anchor",
+    "tags": ["anchor"]
+  },
+  {
+    "id": "Balance",
+    "name": "Balance",
+    "tags": ["balance"]
+  },
+  {
+    "id": "Notifications",
+    "name": "Bell",
+    "tags": ["bell", "notifications"]
+  },
+  {
+    "id": "School",
+    "name": "School",
+    "tags": ["school", "graduate", "graduation", "holiday"]
+  },
+  {
+    "id": "SportsEsports",
+    "name": "Game",
+    "tags": ["sports esports", "games"]
+  },
+  {
+    "id": "Cake",
+    "name": "Cake",
+    "tags": ["cake", "happy birthay"]
+  },
+  {
+    "id": "Luggage",
+    "name": "Luggage",
+    "tags": ["luggage", "travel", "bag"]
+  },
+  {
+    "id": "Vaccines",
+    "name": "Vaccines",
+    "tags": ["vaccines", "health", "injectable"]
+  },
+  {
+    "id": "SportsBasketball",
+    "name": "SportsBasketball",
+    "tags": ["basketball", "sports"]
+  },
+  {
+    "id": "Sports",
+    "name": "Whistle",
+    "tags": ["whistle", "sports", "match"]
+  },
+  {
+    "id": "SportsTennis",
+    "name": "Tennis",
+    "tags": ["tennis", "sports"]
+  },
+  {
+    "id": "Cookie",
+    "name": "Cookie",
+    "tags": ["cookie"]
+  },
+  {
+    "id": "CrueltyFree",
+    "name": "Rabbit",
+    "tags": ["rabbit", "animals", "pets"]
+  },
+  {
+    "id": "OutdoorGrill",
+    "name": "Outdoor Grill",
+    "tags": ["grill", "outdoor"]
+  },
+  {
+    "id": "HeartBroken",
+    "name": "Heart Broken",
+    "tags": ["broken", "heart"]
+  },
+  {
+    "id": "Fireplace",
+    "name": "Fireplace",
+    "tags": ["fireplace", "fire"]
+  },
+  {
+    "id": "Piano",
+    "name": "Piano",
+    "tags": ["piano", "music", "audio"]
+  },
+  {
+    "id": "Surfing",
+    "name": "Surfing",
+    "tags": ["surfing", "summer", "beach"]
+  }
+]
