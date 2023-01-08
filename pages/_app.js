@@ -12,7 +12,6 @@ import {
   Tangerine,
   Courier_Prime,
   Ubuntu_Mono,
-  Marhey,
   Sansita_Swashed,
   Atma,
   Tourney,
@@ -27,7 +26,6 @@ const dancingScript = Dancing_Script();
 const tangerine = Tangerine({ weight: ['400', '700'] });
 const courierPrime = Courier_Prime({ weight: ['400', '700'] });
 const ubuntuMono = Ubuntu_Mono({ weight: ['400', '700'] });
-const marhey = Marhey();
 const sansitaSwashed = Sansita_Swashed();
 const atma = Atma({ weight: ['400', '700'] });
 const tourney = Tourney();
@@ -96,9 +94,6 @@ const MyApp = ({ Component, pageProps }) => {
           }
           .Ubuntu_Mono {
             font-family: ${ubuntuMono.style.fontFamily};
-          }
-          .Marhey {
-            font-family: ${marhey.style.fontFamily};
           }
           .Sansita_Swashed {
             font-family: ${sansitaSwashed.style.fontFamily};

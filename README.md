@@ -10,7 +10,7 @@ Enter **[https://dummy-logo-maker.vercel.app](https://dummy-logo-maker.vercel.ap
 
 ### Next steps
 
-- [ ] Change menu icons.
+- [ ] Change UI for menu icons.
 - [ ] Add new +50 icons.
 - [ ] Add background transparent for logo box.
 - [ ] Fix and improve padding box for SVG tag.
