@@ -54,8 +54,8 @@ const MyApp = ({ Component, pageProps }) => {
         />
       </Head>
       <Script
-        strategy="lazyOnload"
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-W7MJZQ006Q"
       />
       <Script
         id="google-analytics"
@@ -65,7 +65,7 @@ const MyApp = ({ Component, pageProps }) => {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+          gtag('config', 'G-W7MJZQ006Q', {
             page_path: window.location.pathname,
           });
         `,
